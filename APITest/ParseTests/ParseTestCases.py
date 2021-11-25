@@ -51,7 +51,7 @@ def extract_response_request_info(current_line):
     response_time = splitted[1]
     response_time = response_time[:-1]
     current_test_response = TestResponse()
-    current_test_response.request_code = response_code
+    current_test_response.response_code = response_code
     current_test_response.response_time = response_time
     return current_test_response
 
