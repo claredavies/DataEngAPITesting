@@ -35,13 +35,22 @@ def main():
 
     # Find number requests for each endpoint
     # add general_request_uri
-    df1 = df.groupby('general_request_uri').size().reset_index(name='Count')
-    print(df1['Count'])
-    print(df1)
+    df1 = df.groupby('general_request_uri').size().reset_index(name='count')
+    print(df1['count'])
+    df1 = pd.DataFrame(df1)
 
     # Number of request by type for each endpoint
-    df2 = df.groupby(['general_request_uri', 'request_type']).size()
-    print(df2.head(10))
+    df2 = df.groupby(['general_request_uri', 'request_type']).size().reset_index(name='request_type_count')
+    df2 = pd.DataFrame(df2)
+
+    # Number of request by type for each endpoint
+    df3 = df.groupby(['general_request_uri', 'response_code']).size().reset_index(name='response_code_count')
+    df3 = pd.DataFrame(df3)
+
+    # Need to combine into 1 table!
+    df_final = pd.merge(df2, df3)
+
+    print(df_final.head(20))
 
 if __name__ == "__main__":
     main()
