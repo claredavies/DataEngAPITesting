@@ -16,28 +16,32 @@ def main():
     print("total_count ::  " + str(total_count))
     print("total unique requests:: " + str(counts_unique))
 
-    request_uri = df.request_uri.unique()
+    restAPIs = ['/petclinic/actuator', '/petclinic/error', '/petclinic/api/pets', '/petclinic/api/pettypes',
+                '/petclinic/api/owners', '/petclinic/api/specialties', '/petclinic/api/users', '/petclinic/api/vets',
+                '/petclinic/api/visits']
 
-    df.request_uri.value_counts()
+    general_request_uri = []
+    for index, row in df.iterrows():
+        found = False
+        if (row['request_uri'] == '/petclinic'):
+            general_request_uri.append('/petclinic')
+            found = True
+        if not found:
+            for uri in restAPIs:
+                if uri in row['request_uri']:
+                    general_request_uri.append(uri)
+                    pass
+    df['general_request_uri'] = general_request_uri
 
-    df_grouped = df.groupby('request_uri')['request_type'].apply(lambda x: ' '.join(x.astype(str)))
-    print(df_grouped)
+    # Find number requests for each endpoint
+    # add general_request_uri
+    df1 = df.groupby('general_request_uri').size().reset_index(name='Count')
+    print(df1['Count'])
+    print(df1)
 
-    for key, value in df_grouped.items():
-        words = value.split()
-        word_remove_duplicates = " ".join(sorted(set(words), key=words.index))
-        df_grouped[key] = word_remove_duplicates
-        # removing as 14 of roughly same (injected_query_string)
-        if 'petclinic/api/owners/owner' in key:
-            del df_grouped[key]
-        # removing as 14 of roughly same (injected_query_string)
-        if '/petclinic/api/pets/pet' in key:
-            del df_grouped[key]
-
-    df_grouped['petclinic/api/owners/owner'] = 'PUT'
-    df_grouped['petclinic/api/pets/pet'] = 'PUT'
-
-    print(df_grouped)
+    # Number of request by type for each endpoint
+    df2 = df.groupby(['general_request_uri', 'request_type']).size()
+    print(df2.head(10))
 
 if __name__ == "__main__":
     main()
