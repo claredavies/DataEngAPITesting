@@ -92,7 +92,7 @@ def main():
     df = pd.DataFrame([t.__dict__ for t in list_test_cases])
     print(df.head())
     script_dir = os.path.dirname(__file__)
-    rel_path = "test_cases_produced.csv"
+    rel_path = "test_cases_produced_restler.csv"
     abs_file_path_csv = os.path.join(script_dir, rel_path)
     df.to_csv(abs_file_path_csv)
 

@@ -1,6 +1,9 @@
 import os
 import pandas as pd
+
+from ParseTests.TestCase import TestCase
 from ParseTests.TestRequest import TestRequest
+import requests
 
 list_test_requests = []
 
@@ -23,16 +26,42 @@ for line in file:
         if first != -1 and second != -1:
             body = found[(first - 1) + 1:second]
             body = body.replace(" ", "")
-        test_request = TestRequest(request_type, uri, body,0)
+        test_request = TestRequest(request_type, uri, body, 0)
         # Adding to list of test cases
         list_test_requests.append(test_request)
 
-df = pd.DataFrame([t.__dict__ for t in list_test_requests])
+
+df_test_request = pd.DataFrame([t.__dict__ for t in list_test_requests])
+
+list_test_cases = []
+uri = "http://localhost:9966"
+for index, row in df_test_request.iterrows():
+    api_url = uri + row['request_uri']
+    request_type = row['request_type']
+    response = ''
+    if request_type == 'GET':
+        response = requests.get(api_url,row['request_body'])
+    elif request_type == 'PUT':
+        response = requests.put(api_url, row['request_body'])
+    elif request_type == 'POST':
+        response = requests.post(api_url, row['request_body'])
+    # Can't have body' TypeError
+    elif request_type == 'DELETE':
+        response = requests.delete(api_url)
+    # Can't have body' TypeError
+    elif request_type == 'HEAD':
+        response = requests.head(api_url)
+    response_code = response.status_code
+    time_microseconds = response.elapsed.total_seconds()*1000000
+
+    test_case = TestCase(request_type, row['request_uri'], row['request_body'],
+                         response_code, time_microseconds)
+
+    list_test_cases.append(test_case)
+
+df_test_cases = pd.DataFrame([t.__dict__ for t in list_test_cases])
+
 script_dir = os.path.dirname(__file__)
 rel_path = "parsed_requests_generative_model_produced.csv"
 abs_file_path_csv = os.path.join(script_dir, rel_path)
-df.to_csv(abs_file_path_csv)
-
-
-
-
+df_test_cases.to_csv(abs_file_path_csv)
