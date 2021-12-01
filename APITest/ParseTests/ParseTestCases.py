@@ -40,7 +40,7 @@ def extract_sending_request_info(current_line):
         return current_test_request
     # Line to handle certain cases where line contains sending but not an actual request
     except IndexError:
-        print("invalid request:  \n")
+        print("Handling invalid request:  \n")
         return None
 
 # Method which extracts the response code and response time (stored as TestResponse object)
