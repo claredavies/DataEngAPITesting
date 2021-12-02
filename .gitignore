@@ -1,0 +1,17 @@
+APITest/.idea
+APITest/.idea/
+APITest/ParseTests/__pycache__
+APITest/ParseTests/__pycache__/
+target/*
+.settings/*
+.classpath
+.project
+.idea
+*.iml
+/target
+
+generated/
+
+# Easier branch switching
+springboot-petclinic-client/
+springboot-petclinic-server/
