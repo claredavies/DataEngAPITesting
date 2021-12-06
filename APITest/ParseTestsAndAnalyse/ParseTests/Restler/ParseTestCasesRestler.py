@@ -2,9 +2,9 @@ import os
 from datetime import datetime
 import pandas as pd
 
-from ParseTests.TestCase import TestCase
-from ParseTests.TestRequest import TestRequest
-from ParseTests.TestResponse import TestResponse
+from ParseTestsAndAnalyse.TestCase import TestCase
+from ParseTestsAndAnalyse.TestRequest import TestRequest
+from ParseTestsAndAnalyse.TestResponse import TestResponse
 
 list_test_cases = []
 

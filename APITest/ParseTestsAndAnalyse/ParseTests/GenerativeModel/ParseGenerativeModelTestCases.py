@@ -1,8 +1,8 @@
 import os
 import pandas as pd
 
-from ParseTests.TestCase import TestCase
-from ParseTests.TestRequest import TestRequest
+from ParseTestsAndAnalyse.TestCase import TestCase
+from ParseTestsAndAnalyse.TestRequest import TestRequest
 import requests
 
 list_test_requests = []

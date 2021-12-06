@@ -1,4 +1,4 @@
-import os
+from os import path
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -18,12 +18,13 @@ def add_general_uri_column(test_dataframe, restAPIs):
 
 def main():
     # Reading in file
-    script_dir = os.path.dirname(__file__)
-    rel_path_restler_test_cases = "test_cases_produced_restler.csv"
-    abs_file_path_restler_test_cases = os.path.join(script_dir, rel_path_restler_test_cases)
+    basepath = path.dirname(__file__)
+    # APITest/ParseTestsAndAnalyse/ParseTests/Restler/test_cases_produced_restler.csv
+    abs_file_path_restler_test_cases = path.abspath(path.join(basepath, "..", "ParseTests/Restler"
+                                                                                    "/test_cases_produced_restler.csv"))
 
-    rel_path_generative_test_cases = "parsed_requests_generative_model_produced.csv"
-    abs_file_path_generative_test_cases = os.path.join(script_dir, rel_path_generative_test_cases)
+    abs_file_path_generative_test_cases = path.abspath(path.join(basepath, "..", "ParseTests/GenerativeModel"
+                                                                                       "/parsed_requests_generative_model_produced.csv"))
 
     df_restler_test_cases = pd.read_csv(abs_file_path_restler_test_cases)
     df_generative_test_cases = pd.read_csv(abs_file_path_generative_test_cases)
@@ -55,12 +56,12 @@ def main():
     # Need to combine into 1 table where see for each endpoint the types of requests and responses
     df_general_request_request_type_response_type_restler = pd.merge(request_type_count_restler, response_code_count_restler)
     rel_path_restler_test_cases = "test_cases_analysis_restler.csv"
-    abs_file_path_csv_restler = os.path.join(script_dir, rel_path_restler_test_cases)
+    abs_file_path_csv_restler = path.abspath(path.join(basepath, rel_path_restler_test_cases))
     df_general_request_request_type_response_type_restler.to_csv(abs_file_path_csv_restler)
 
     df_general_request_request_type_response_type_generative = pd.merge(request_type_count_generative, response_code_count_generative)
     rel_path_generative_test_cases = "test_cases_analysis_generative.csv"
-    abs_file_path_csv_generative = os.path.join(script_dir, rel_path_generative_test_cases)
+    abs_file_path_csv_generative = path.abspath(path.join(basepath, rel_path_generative_test_cases))
     df_general_request_request_type_response_type_generative.to_csv(abs_file_path_csv_generative)
 
     plt.subplot(3, 3, 1)
