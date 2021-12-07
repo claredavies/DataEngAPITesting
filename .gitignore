@@ -2,6 +2,8 @@ APITest/.idea
 APITest/.idea/
 APITest/ParseTests/__pycache__
 APITest/ParseTests/__pycache__/
+RestAPI/.mvn
+RestAPI/.mvn/
 target/*
 .settings/*
 .classpath
