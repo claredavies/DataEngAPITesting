@@ -96,7 +96,6 @@ def main():
     abs_file_path_csv = os.path.join(script_dir, rel_path)
     df.to_csv(abs_file_path_csv)
 
-
 if __name__ == "__main__":
     main()
 
