@@ -24,7 +24,7 @@ for line in file:
         first = found.find("{")
         second = line.rfind("}")
         if first != -1 and second != -1:
-            body = found[(first - 1) + 1:second]
+            body = found[(first - 1) + 1:(second+1)]
             body = body.replace(" ", "")
         test_request = TestRequest(request_type, uri, body, 0)
         # Adding to list of test cases
