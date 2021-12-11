@@ -20,7 +20,6 @@ for line in file:
         try:
             request_type = splitted[1]
             uri = splitted[2]
-
             body = ''
             first = found.find("{")
             second = line.rfind("}")
@@ -59,7 +58,6 @@ for index, row in df_test_request.iterrows():
 
         test_case = TestCase(request_type, row['request_uri'], row['request_body'],
                              response_code, time_microseconds)
-
         list_test_cases.append(test_case)
     except AttributeError:
         print(response)
