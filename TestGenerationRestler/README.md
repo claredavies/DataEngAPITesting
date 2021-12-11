@@ -45,6 +45,6 @@ To execute once every endpoint+method in a compiled RESTler grammar with a defau
 
 To explore a RESTler fuzzing grammar in smart breadth-first-search mode for finding more bugs. This may take a long time due to the system you are running. In our case it takes around two hours
 ```
-.\restler fuzz-lean --grammar_file <restler_root_directory>\restler_bin\restler\Compile\grammar.py --dictionary_file <restler_root_directory>\restler_bin\restler\Compile\dict.json --settings <restler_root_directory>\restler_bin\restler\Compile\engine_settings.json --no_ssl
+.\restler fuzz --grammar_file <restler_root_directory>\restler_bin\restler\Compile\grammar.py --dictionary_file <restler_root_directory>\restler_bin\restler\Compile\dict.json --settings <restler_root_directory>\restler_bin\restler\Compile\engine_settings.json --no_ssl
 ```
 
