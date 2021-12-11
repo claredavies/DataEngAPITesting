@@ -17,21 +17,25 @@ for line in file:
     if line != "\n":
         found = line.rstrip()
         splitted = found.split()
-        request_type = splitted[1]
-        uri = splitted[2]
+        try:
+            request_type = splitted[1]
+            uri = splitted[2]
 
-        body = ''
-        first = found.find("{")
-        second = line.rfind("}")
-        if first != -1 and second != -1:
-            body = found[(first - 1) + 1:(second+1)]
-            body = body.replace(" ", "")
-        test_request = TestRequest(request_type, uri, body, 0)
-        # Adding to list of test cases
-        list_test_requests.append(test_request)
+            body = ''
+            first = found.find("{")
+            second = line.rfind("}")
+            if first != -1 and second != -1:
+                body = found[(first - 1) + 1:(second+1)]
+                body = body.replace(" ", "")
+            test_request = TestRequest(request_type, uri, body, 0)
+            # Adding to list of test cases
+            list_test_requests.append(test_request)
+        except IndexError:
+            print("handling non-valid line")
 
 
 df_test_request = pd.DataFrame([t.__dict__ for t in list_test_requests])
+print(df_test_request["request_body"].head())
 
 list_test_cases = []
 uri = "http://localhost:9966"
@@ -45,19 +49,21 @@ for index, row in df_test_request.iterrows():
         response = requests.put(api_url, row['request_body'])
     elif request_type == 'POST':
         response = requests.post(api_url, row['request_body'])
-    # Can't have body' TypeError
     elif request_type == 'DELETE':
         response = requests.delete(api_url)
-    # Can't have body' TypeError
     elif request_type == 'HEAD':
         response = requests.head(api_url)
-    response_code = response.status_code
-    time_microseconds = response.elapsed.total_seconds()*1000000
+    try:
+        response_code = response.status_code
+        time_microseconds = response.elapsed.total_seconds()*1000000
 
-    test_case = TestCase(request_type, row['request_uri'], row['request_body'],
-                         response_code, time_microseconds)
+        test_case = TestCase(request_type, row['request_uri'], row['request_body'],
+                             response_code, time_microseconds)
 
-    list_test_cases.append(test_case)
+        list_test_cases.append(test_case)
+    except AttributeError:
+        print(response)
+
 
 df_test_cases = pd.DataFrame([t.__dict__ for t in list_test_cases])
 
