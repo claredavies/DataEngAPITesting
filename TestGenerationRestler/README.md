@@ -5,7 +5,7 @@
 RESTler is a fuzzing tool for automatically finding security and reliability bugs in RESTful services. For a given service
 with an OpenAPI/Swagger specification, RESTler analyzes its entire specification, and then generates and executes tests that exercise the service through its REST API.
 
-![RESTler architecture](./docs/user-guide/RESTler-arch.png)
+![RESTler architecture](./images/RESTler-arch.png)
 
 ## Setting up the environment
 
