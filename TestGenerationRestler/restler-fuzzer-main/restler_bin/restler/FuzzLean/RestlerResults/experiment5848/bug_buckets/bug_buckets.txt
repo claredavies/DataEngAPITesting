@@ -1,0 +1,38 @@
+main_driver_500: 6
+InvalidDynamicObjectChecker_20x: 2
+Total Buckets: 8
+-------------
+main_driver_500 - Bug was reproduced - main_driver_500_1.txt
+Hash: main_driver_500_4529fc99abaa5e429fc2d24755708e922835ce08
+GET /petclinic/error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\n\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_2.txt
+Hash: main_driver_500_b132917329ac45af3b1246079255511790a850ff
+HEAD /petclinic/error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\n\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_3.txt
+Hash: main_driver_500_466355e5df7bf4f9991edea02c9de4a7ba21eeca
+DELETE /petclinic/error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\n\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_4.txt
+Hash: main_driver_500_9fa861207c76cacb9bf31eafaead33fe61700029
+POST /petclinic/error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\n\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_5.txt
+Hash: main_driver_500_0ca47436ea4dd5571a2769109a7993a6238184de
+PATCH /petclinic/error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\n\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_6.txt
+Hash: main_driver_500_0ac27bae4fb7ff139a04080efaec3b1ad17b7557
+PUT /petclinic/error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\n\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Bug was reproduced - InvalidDynamicObjectChecker_20x_1.txt
+Hash: InvalidDynamicObjectChecker_20x_552acef874ecce1732aea3093e538dc886ef7e83
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\nContent-Type: application/json\r\n\r\n{\n    "id":1,\n    "name":fuzzstring}\r\n
+PUT /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\nContent-Type: application/json\r\n\r\n{\n    "id":1,\n    "name":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Bug was reproduced - InvalidDynamicObjectChecker_20x_2.txt
+Hash: InvalidDynamicObjectChecker_20x_cd4656a197e738258d1588db56f6b59f29d4e6c0
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\nContent-Type: application/json\r\n\r\n{\n    "id":1,\n    "name":fuzzstring}\r\n
+GET /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\n\r\n
+--------------------------------------------------------------------------------

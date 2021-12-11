@@ -1,0 +1,571 @@
+{
+  "400": {
+    "0577fba9-508c-4104-90d2-8817b2f0ec2e": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/petclinic/api/specialties/1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "",
+            "content": "{\"className\":\"org.springframework.dao.DataIntegrityViolationException\",\"exMessage\":\"could not execute statement; SQL [n/a]; constraint [FK_VET_SPECIALTIES_SPECIALTIES]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "148aed8c-fe7a-4465-a39c-96bacb4769a5": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/petclinic/api/owners",
+            "query": "",
+            "body": "{ \"fuzz\": false }\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "2bf2d9c6-c409-4291-a093-210541ea7468": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/petclinic/api/visits",
+            "query": "",
+            "body": "{\n    \"date\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"id\":1,\n    \"pet\":\n        { \"fuzz\": false }\n    }\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "",
+            "content": "{\"className\":\"org.springframework.http.converter.HttpMessageNotReadableException\",\"exMessage\":\"JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \\\"fuzzstring\\\": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text \\'fuzzstring\\' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \\\"fuzzstring\\\": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text \\'fuzzstring\\' could not be parsed at index 0\\\n at [Source: (PushbackInputStream); line: 2, column: 12] (through reference chain: org.springframework.samples.petclinic.dto.VisitDto[\\\"date\\\"])\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/petclinic/api/visits",
+            "query": "",
+            "body": "{\n    \"date\":\"yyyy/MM/dd\",\n    \"description\":\"fuzzstring\",\n    \"id\":1,\n    \"pet\":\n        { \"fuzz\": false }\n    }\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "",
+            "content": "{\"className\":\"org.springframework.http.converter.HttpMessageNotReadableException\",\"exMessage\":\"JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \\\"yyyy/MM/dd\\\": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text \\'yyyy/MM/dd\\' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \\\"yyyy/MM/dd\\\": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text \\'yyyy/MM/dd\\' could not be parsed at index 0\\\n at [Source: (PushbackInputStream); line: 2, column: 12] (through reference chain: org.springframework.samples.petclinic.dto.VisitDto[\\\"date\\\"])\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "3ab0a5b3-dad4-47b9-ad75-00c9e97a210a": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{ \"fuzz\": false }\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "",
+            "content": "{\"className\":\"org.springframework.web.method.annotation.MethodArgumentTypeMismatchException\",\"exMessage\":\"Failed to convert value of type \\'java.lang.String\\' to required type \\'int\\'; nested exception is java.lang.NumberFormatException: For input string: \\\"petid_RANDOM_SUFFIX_ABSTRACTED_\\\"\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/owners/ownerid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{ \"fuzz\": false }\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "",
+            "content": "{\"className\":\"org.springframework.web.method.annotation.MethodArgumentTypeMismatchException\",\"exMessage\":\"Failed to convert value of type \\'java.lang.String\\' to required type \\'int\\'; nested exception is java.lang.NumberFormatException: For input string: \\\"ownerid_RANDOM_SUFFIX_ABSTRACTED_\\\"\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "b0635603-312e-40d2-8862-d34b83990216": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/petclinic/api/pets",
+            "query": "",
+            "body": "{ \"fuzz\": false }\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  },
+  "404": {
+    "06421537-0d76-4e91-a1cf-e93ff0c69810": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pettypes/1",
+            "query": "",
+            "body": "{\n    \"id\":1,\n    \"name\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "0e1bce34-c2a7-46c0-8cff-541d1e4b259e": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/petclinic/api/owners/1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "12b1ed29-13d5-4686-a13c-52bda1fc04c2": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/vets/1",
+            "query": "",
+            "body": "{\n    \"firstName\":\"fuzzstring\",\n    \"id\":1,\n    \"lastName\":\"fuzzstring\",\n    \"specialties\":\n    [\n        {\n            \"id\":1,\n            \"name\":\"fuzzstring\"\n        }\n    ]}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "2919c6af-35bf-4003-8a8b-1f1c2455f05e": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/petclinic/api/owners/*/lastname/fuzzstring",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "2e252a27-c138-4946-a10d-cd0bfb1d96c2": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/petclinic/api/pets/1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "43ea51f0-3cf8-423b-a178-435f05821f6e": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/petclinic/api/pets/1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "6258e19f-c42a-4be0-a5c1-d5c9b2791ca7": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/petclinic/actuator/health/**",
+            "query": "",
+            "body": "{ \"fuzz\": false }\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "e54c212a-82f5-43a3-8d6e-5a7e05ea218c": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/petclinic/api/pettypes/1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  },
+  "500": {
+    "10265d04-f208-4ae2-b2cb-e429e1e24040": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "56\r\n{\"timestamp\":\"2021-11-30T18:12:00.661+00:00\",\"status\":999,\"error\":\"None\",\"message\":\"\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ],
+    "28aec997-bdac-4c5f-9036-3c20ebfb6283": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "PATCH",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "56\r\n{\"timestamp\":\"2021-11-30T18:12:02.431+00:00\",\"status\":999,\"error\":\"None\",\"message\":\"\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ],
+    "45496405-363e-4072-8703-6094c245054b": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "56\r\n{\"timestamp\":\"2021-11-30T18:12:00.688+00:00\",\"status\":999,\"error\":\"None\",\"message\":\"\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ],
+    "45dc08f1-f573-4dc4-ac1e-3cf54a29bc99": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "HEAD",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ],
+    "4cee1491-afcd-41ab-a010-964f08057b7a": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "56\r\n{\"timestamp\":\"2021-11-30T18:12:02.556+00:00\",\"status\":999,\"error\":\"None\",\"message\":\"\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ],
+    "50af9cec-fef7-4e35-a574-38e484743acc": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "56\r\n{\"timestamp\":\"2021-11-30T18:12:01.011+00:00\",\"status\":999,\"error\":\"None\",\"message\":\"\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ],
+    "5c9c3687-2d88-4f75-8267-98980bba6b1b": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "56\r\n{\"timestamp\":\"2021-11-30T18:12:00.980+00:00\",\"status\":999,\"error\":\"None\",\"message\":\"\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ],
+    "71938b45-edb2-47e0-b0e3-adcb4418193e": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "56\r\n{\"timestamp\":\"2021-11-30T18:12:02.600+00:00\",\"status\":999,\"error\":\"None\",\"message\":\"\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ],
+    "73936fe7-1ff2-44ad-ab99-1fc7f3543852": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "HEAD",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ],
+    "788acfcd-5cff-4132-a5a2-0838da9030ba": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "56\r\n{\"timestamp\":\"2021-11-30T18:11:58.176+00:00\",\"status\":999,\"error\":\"None\",\"message\":\"\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ],
+    "85a243ff-2def-4183-b194-7950b07b7e95": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "PATCH",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "56\r\n{\"timestamp\":\"2021-11-30T18:12:02.387+00:00\",\"status\":999,\"error\":\"None\",\"message\":\"\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ],
+    "e0034905-4443-4724-a98e-d9d299e7e9fb": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/petclinic/error",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "56\r\n{\"timestamp\":\"2021-11-30T18:11:58.129+00:00\",\"status\":999,\"error\":\"None\",\"message\":\"\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ]
+  }
+}

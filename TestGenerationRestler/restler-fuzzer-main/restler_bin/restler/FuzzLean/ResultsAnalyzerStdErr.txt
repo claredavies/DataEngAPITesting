@@ -1,0 +1,32 @@
+Warning: could not parse request in line 6619: PUT /petclinic/api/specialties/1?? HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\nContent-Type: application/json\r\nContent-Length: 40\r\nUser-Agent: restler/8.2.0\r\n\r\n{\n    "id":1,\n    "name":"fuzzstring"}\r\n
+Warning: could not parse request in line 8609: GET /petclinic/api/specialties/1?? HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:9966\r\nContent-Length: 0\r\nUser-Agent: restler/8.2.0\r\n\r\n
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100
+ERROR: Ran out of buckets for error code 400! The maximum is: 100

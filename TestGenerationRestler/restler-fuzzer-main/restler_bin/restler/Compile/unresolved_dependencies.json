@@ -1,0 +1,316 @@
+{
+  "/api/owners/*/lastname/{lastName}": {
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "lastName"
+        }
+      ]
+    }
+  },
+  "/api/owners/{ownerId}": {
+    "DELETE": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "ownerId"
+        }
+      ]
+    },
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "ownerId"
+        }
+      ]
+    }
+  },
+  "/api/pets/{petId}": {
+    "DELETE": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "petId"
+        }
+      ]
+    },
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "petId"
+        }
+      ]
+    }
+  },
+  "/api/pettypes": {
+    "POST": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "name"
+        }
+      ]
+    }
+  },
+  "/api/pettypes/{petTypeId}": {
+    "PUT": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "name"
+        }
+      ]
+    }
+  },
+  "/api/specialties": {
+    "POST": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "name"
+        }
+      ]
+    }
+  },
+  "/api/specialties/{specialtyId}": {
+    "PUT": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "name"
+        }
+      ]
+    }
+  },
+  "/api/users": {
+    "POST": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "enabled"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "password"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "roles/[0]"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "roles/[0]/id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "roles/[0]/name"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "username"
+        }
+      ]
+    }
+  },
+  "/api/vets": {
+    "POST": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "firstName"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "lastName"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]/id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]/name"
+        }
+      ]
+    }
+  },
+  "/api/vets/{vetId}": {
+    "PUT": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "firstName"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "lastName"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]/id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]/name"
+        }
+      ]
+    }
+  },
+  "/api/visits": {
+    "POST": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "date"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "description"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "pet"
+        }
+      ]
+    }
+  },
+  "/api/visits/{visitId}": {
+    "PUT": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "date"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "description"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "pet"
+        }
+      ]
+    }
+  }
+}

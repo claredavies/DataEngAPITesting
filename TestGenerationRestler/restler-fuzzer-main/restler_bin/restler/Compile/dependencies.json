@@ -1,0 +1,448 @@
+{
+  "/api/owners/*/lastname/{lastName}": {
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "lastName"
+        }
+      ]
+    }
+  },
+  "/api/owners/{ownerId}": {
+    "DELETE": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "ownerId"
+        }
+      ]
+    },
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "ownerId"
+        }
+      ]
+    },
+    "PUT": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "restler_custom_payload_uuid_suffix__ownerId",
+          "consumer_param": "ownerId"
+        }
+      ]
+    }
+  },
+  "/api/pets/{petId}": {
+    "DELETE": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "petId"
+        }
+      ]
+    },
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "petId"
+        }
+      ]
+    },
+    "PUT": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "restler_custom_payload_uuid_suffix__petId",
+          "consumer_param": "petId"
+        }
+      ]
+    }
+  },
+  "/api/pettypes": {
+    "POST": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "name"
+        }
+      ]
+    }
+  },
+  "/api/pettypes/{petTypeId}": {
+    "DELETE": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/pettypes",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "petTypeId"
+        }
+      ]
+    },
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/pettypes",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "petTypeId"
+        }
+      ]
+    },
+    "PUT": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/pettypes",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "petTypeId"
+        }
+      ],
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "name"
+        }
+      ]
+    }
+  },
+  "/api/specialties": {
+    "POST": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "name"
+        }
+      ]
+    }
+  },
+  "/api/specialties/{specialtyId}": {
+    "DELETE": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/specialties",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "specialtyId"
+        }
+      ]
+    },
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/specialties",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "specialtyId"
+        }
+      ]
+    },
+    "PUT": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/specialties",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "specialtyId"
+        }
+      ],
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "name"
+        }
+      ]
+    }
+  },
+  "/api/users": {
+    "POST": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "enabled"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "password"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "roles/[0]"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "roles/[0]/id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "roles/[0]/name"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "username"
+        }
+      ]
+    }
+  },
+  "/api/vets": {
+    "POST": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "firstName"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "lastName"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]/id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]/name"
+        }
+      ]
+    }
+  },
+  "/api/vets/{vetId}": {
+    "DELETE": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/vets",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "vetId"
+        }
+      ]
+    },
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/vets",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "vetId"
+        }
+      ]
+    },
+    "PUT": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/vets",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "vetId"
+        }
+      ],
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "firstName"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "lastName"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]/id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "specialties/[0]/name"
+        }
+      ]
+    }
+  },
+  "/api/visits": {
+    "POST": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "date"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "description"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "pet"
+        }
+      ]
+    }
+  },
+  "/api/visits/{visitId}": {
+    "DELETE": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/visits",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "visitId"
+        }
+      ]
+    },
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/visits",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "visitId"
+        }
+      ]
+    },
+    "PUT": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/visits",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "visitId"
+        }
+      ],
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "date"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "description"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "pet"
+        }
+      ]
+    }
+  }
+}
