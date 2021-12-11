@@ -1,5 +1,0 @@
-{
-  "restler_custom_payload": {
-    "/stores/{storeId}/order/post/Content-Type": [ "xml" ]
-  }
-}

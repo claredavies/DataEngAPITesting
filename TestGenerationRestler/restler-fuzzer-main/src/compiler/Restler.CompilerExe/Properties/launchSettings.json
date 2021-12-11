@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Restler.CompilerExe": {
-      "commandName": "Project",
-      "commandLineArgs": "d:\\test\\exformat\\config.json"
-    }
-  }
-}
