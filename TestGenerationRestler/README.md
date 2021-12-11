@@ -33,17 +33,20 @@ To compile the OAS and generate RESTler grammar, go the ```restler_bin/restler``
 ```
 
 
-To execute quickly all of the endpoints+methods in a compiled RESTler grammar for debugging the test setup and compute what parts of the Swagger spec are covered.
+
+To execute quickly all of the endpoints+methods in a compiled RESTler grammar for debugging the test setup and compute what parts of the Swagger spec are covered:
 ```
 .\restler test --grammar_file <restler_root_directory>\restler_bin\restler\Compile\grammar.py --dictionary_file <restler_root_directory>\restler_bin\restler\Compile\dict.json --settings <restler_root_directory>\restler_bin\restler\Compile\engine_settings.json --no_ssl
 ```
 
-To execute once every endpoint+method in a compiled RESTler grammar with a default set of checkers to see if bugs can be found quickly
+
+To execute once every endpoint+method in a compiled RESTler grammar with a default set of checkers to see if bugs can be found quickly:
 ```
 .\restler fuzz-lean --grammar_file <restler_root_directory>\restler_bin\restler\Compile\grammar.py --dictionary_file <restler_root_directory>\restler_bin\restler\Compile\dict.json --settings <restler_root_directory>\restler_bin\restler\Compile\engine_settings.json --no_ssl
 ```
 
-To explore a RESTler fuzzing grammar in smart breadth-first-search mode for finding more bugs. This may take a long time due to the system you are running. In our case it takes around two hours
+
+To explore a RESTler fuzzing grammar in smart breadth-first-search mode for finding more bugs. This may take a long time due to the system you are running. In our case it takes around two hours.
 ```
 .\restler fuzz --grammar_file <restler_root_directory>\restler_bin\restler\Compile\grammar.py --dictionary_file <restler_root_directory>\restler_bin\restler\Compile\dict.json --settings <restler_root_directory>\restler_bin\restler\Compile\engine_settings.json --no_ssl
 ```
