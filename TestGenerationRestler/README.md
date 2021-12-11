@@ -51,3 +51,13 @@ To explore a RESTler fuzzing grammar in smart breadth-first-search mode for find
 .\restler fuzz --grammar_file <restler_root_directory>\restler_bin\restler\Compile\grammar.py --dictionary_file <restler_root_directory>\restler_bin\restler\Compile\dict.json --settings <restler_root_directory>\restler_bin\restler\Compile\engine_settings.json --no_ssl
 ```
 
+After running the above commands, RESTler prints the results:
+![RESTler output](./images/restler_output.png)
+
+You can access to the requests and responses during the fuzzing via this directory:
+```<restler_root_directory>\restler_bin\restler\Fuzz\RestlerResults\experiment___\logs\network.testing.____.txt```
+
+Also it is possible to extend the dictionary of the RESTler by editing this file:
+```<restler_root_directory>\restler_bin\restler\Compile\dict.json```
+
+You can find both dictionary and RESTler produced request/response files in this repository
