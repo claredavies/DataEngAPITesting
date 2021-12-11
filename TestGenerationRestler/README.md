@@ -14,3 +14,8 @@ RESTler was designed to run on 64-bit machines with Windows or Linux. Running on
 You need to install Python 3.8.2 (https://www.python.org/downloads/) and [.NET 5.0](https://dotnet.microsoft.com/download/dotnet-core?utm_source=getdotnetcorecli&utm_medium=referral). Be careful about the Python version, as it should be exact the same.
 
 After installing the prerequisites, you should clone the [RESTler repository](https://github.com/microsoft/restler-fuzzer)
+
+Create a folder called ```restler_bin``` in the RESTler directory.
+
+The Server (PetClinic) should be up, so the RESTler can send requests and retrieve the responses. The RESTler produce grammers based on the OAS. You can get PetClinic Open API file from http://localhost:9966/petclinic/v2/api-docs or download it from the repo.
+Save this file as ```api-docs.json```
