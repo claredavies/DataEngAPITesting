@@ -1,5 +1,5 @@
 Instructions
-1) Go to the ParseTests/Restler folder and either use the restler_output.txt already there or replace it with your own version
+1) Rename the output txt file from Restler as restler_output.txt. Then go to the ParseTests/Restler folder and paste in the restler_output.txt file. (Instruction for generating Restler file https://github.com/claredavies/DataEngAPITesting/tree/master/TestGenerationRestler)
 2) Run the ParseTestCasesRestler.py file and it will produce a parsed file (don't move or touch as already in the right place)
 3) Go to the ParseTests/GenerativeModel folder and either use the generative_model_test_cases_produced.txt already there or replace it with your own version
 4) For parsing the test cases for the generative model the reponses from the RestAPIs need to be found which requires you running the RestAPIS locally 
