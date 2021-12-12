@@ -54,6 +54,7 @@ To explore a RESTler fuzzing grammar in smart breadth-first-search mode for find
 After running the above commands, RESTler prints the results:
 ![RESTler output](./images/restler_output.png)
 
+
 You can access to the requests and responses during the fuzzing via this directory:
 ```<restler_root_directory>\restler_bin\restler\Fuzz\RestlerResults\experiment___\logs\network.testing.____.txt```
 
