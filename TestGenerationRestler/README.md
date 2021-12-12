@@ -53,8 +53,8 @@ To explore a RESTler fuzzing grammar in smart breadth-first-search mode for find
 ```
 
 After running the above commands, RESTler prints the results:
+<br />
 ![RESTler output](./images/restler_output.png)
-
 <br />
 
 You can access to the requests and responses during the fuzzing via this directory:
