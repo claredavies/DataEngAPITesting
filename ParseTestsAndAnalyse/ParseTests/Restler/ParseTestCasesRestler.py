@@ -2,9 +2,9 @@ import os
 from datetime import datetime
 import pandas as pd
 
-from ParseTestsAndAnalyse.TestCase import TestCase
-from ParseTestsAndAnalyse.TestRequest import TestRequest
-from ParseTestsAndAnalyse.TestResponse import TestResponse
+from ParseTestsAndAnalyse.ParseTests.Helper.TestCase import TestCase
+from ParseTestsAndAnalyse.ParseTests.Helper.TestRequest import TestRequest
+from ParseTestsAndAnalyse.ParseTests.Helper.TestResponse import TestResponse
 
 list_test_cases = []
 
@@ -43,6 +43,7 @@ def extract_sending_request_info(current_line):
         print("Handling invalid request:  \n")
         return None
 
+
 # Method which extracts the response code and response time (stored as TestResponse object)
 def extract_response_request_info(current_line):
     found = current_line.rstrip()
@@ -55,6 +56,7 @@ def extract_response_request_info(current_line):
     current_test_response.response_time = response_time
     return current_test_response
 
+
 # Method which converts the date text to needed datetime format and then calculates time
 # between when request sent and received in microseconds
 def get_reponse_time_microseconds(request_time_sent, response_time_received):
@@ -63,8 +65,9 @@ def get_reponse_time_microseconds(request_time_sent, response_time_received):
     response_time = time_received - time_sent
     return response_time.microseconds
 
-# Main function which reads in restler_output.txt file and extracts the test case (request_type, request_uri, request_body, response_code and
-# response_time_microseconds)
+
+# Main function which reads in restler_output.txt file and extracts the test case (request_type, request_uri,
+# request_body, response_code and response_time_microseconds)
 def main():
     # Reading in file
     script_dir = os.path.dirname(__file__)
@@ -99,4 +102,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

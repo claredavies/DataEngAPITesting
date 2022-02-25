@@ -2427,6 +2427,8 @@ HTTP POST /petclinic/api/vets/1 {"id":false,"name":"fuzzstring"}
 HTTP POST /petclinic/api/vets/1 {"id":"fuzzstring","name":"fuzzstring"}
 HTTP POST /petclinic/api/vets/1 {"id":false,"name":[]}
 HTTP POST /petclinic/api/vets/1 {"id":0,"name":0}
+
+====================
 HTTP DELETE /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":0,"specialties":[{"id":0,"name":"fuzzstring"}]}
 HTTP POST /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
 HTTP POST /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
