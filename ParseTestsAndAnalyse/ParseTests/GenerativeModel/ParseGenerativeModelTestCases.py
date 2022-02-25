@@ -1,37 +1,11 @@
 import os
 import pandas as pd
-
-from ParseTestsAndAnalyse.TestCase import TestCase
-from ParseTestsAndAnalyse.TestRequest import TestRequest
 import requests
 
-list_test_requests = []
+from ParseTestsAndAnalyse.ParseTests.Helper.ParsingMethods import ParsingMethods
+from ParseTestsAndAnalyse.ParseTests.Helper.TestCase import TestCase
 
-script_dir = os.path.dirname(__file__)
-rel_path_generative_model_cases = "generative_model_test_cases_produced.txt"
-abs_file_path_generative_model = os.path.join(script_dir, rel_path_generative_model_cases)
-
-# opening the file in read mode
-file = open(abs_file_path_generative_model, "r")
-for line in file:
-    if line != "\n":
-        found = line.rstrip()
-        splitted = found.split()
-        try:
-            request_type = splitted[1]
-            uri = splitted[2]
-            body = ''
-            first = found.find("{")
-            second = line.rfind("}")
-            if first != -1 and second != -1:
-                body = found[(first - 1) + 1:(second+1)]
-                body = body.replace(" ", "")
-            test_request = TestRequest(request_type, uri, body, 0)
-            # Adding to list of test cases
-            list_test_requests.append(test_request)
-        except IndexError:
-            print("handling non-valid line")
-
+list_test_requests = ParsingMethods.readInTestCasesProducedGenerativeModel()
 
 df_test_request = pd.DataFrame([t.__dict__ for t in list_test_requests])
 print(df_test_request["request_body"].head())
@@ -61,7 +35,6 @@ for index, row in df_test_request.iterrows():
         list_test_cases.append(test_case)
     except AttributeError:
         print(response)
-
 
 df_test_cases = pd.DataFrame([t.__dict__ for t in list_test_cases])
 
