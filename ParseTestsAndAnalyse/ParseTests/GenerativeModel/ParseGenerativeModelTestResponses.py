@@ -29,33 +29,45 @@ for index, row in df_test_request.iterrows():
 
     response_case = TestResponse()
     try:
+        response_case.request_type = request_type
         response_case.response_code = response.status_code
-        response_case.time_microseconds = response.elapsed.total_seconds() * 1000000
+        response_case.response_time = response.elapsed.total_seconds() * 1000000
+
+        response_case.response_connection = response.headers['Connection']
+        response_case.response_content_length = response.headers['Content-Length']
 
         content_string = response.content.decode('utf-8')
-        data = ast.literal_eval(content_string)
+        content_json = ast.literal_eval(content_string)
 
-        response_case.response_class_name = data['className']
-        response_case.response_msg = data['exMessage']
+        response_case.response_error_class_name = content_json['className']
+        response_case.response_error_msg = content_json['exMessage']
 
-        print("success data")
+    except AttributeError as e:
+        print(e)
+        # print("here 1")
 
-        # response_headers = response.headers
-
-    except AttributeError:
-        print(response)
-
+    # key not there
     except KeyError as e:
         print(e)
+        # print("here 2")
+        # print(response.content)
 
+    # value nested list
     except TypeError as e:
         print(e)
+        # print("here 3")
+        # print(response.content)
 
+    # doctype html or body blank
     except SyntaxError as e:
         print(e)
+        # print("here 4")
+        # print(response.content)
 
     except ValueError as e:
         print(e)
+        # print("here 5")
+        # print(response.content)
 
     finally:
         list_response_cases.append(response_case)
