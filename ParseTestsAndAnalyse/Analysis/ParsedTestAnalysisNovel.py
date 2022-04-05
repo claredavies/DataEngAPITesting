@@ -10,6 +10,7 @@ def main():
                                                                                  "/novel/parsed_requests_generative_model_novel_produced.csv"))
 
     df_generative_test_cases = pd.read_csv(abs_file_path_generative_test_cases)
+    df_generative_test_cases.loc[df_generative_test_cases['request_type'].str.contains('OPTION'), 'request_type'] = 'OPTION'
 
     plt.figure()
     plt.subplot(2, 3, 1)
