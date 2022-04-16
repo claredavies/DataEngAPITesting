@@ -1,0 +1,965 @@
+HTTP POST /petclinic/api/users {"roles":[{"id":[]}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"false","roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"name":"ROLE_0"}],"username":"false"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_0"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":{ "fuzz" : false },"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":false}]}
+HTTP PUT /petclinic/api/owners/owneridf9fde4249c { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petid7233a41764 { "fuzz": true}
+HTTP GET /petclinic/api/pets/1 { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petid6ca1628d6 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"id":[]}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[0],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":{ "fuzz" : false },"password":"fuzzstring","roles":[{"id":{ "fuzz" : false },"username":"fuzzstring"}]}
+HTTP GET /petclinic/api/specialties/1 {"id":0,"name":0}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":false,"lastName":"fuzzstring","specialties":[{"id":0,"name":false}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"id":"fuzzstring"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"name":"ROLE_0"}],"username":[]}
+HTTP GET /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":0,"specialties":[{"id":0}]}
+HTTP POST /petclinic/api/vets {"lastName":{ "fuzz" : false },"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"id":0}],"username":"0"}
+HTTP GET /petclinic/api/vets/1 {"specialties":[{"id":0,"name":false}]}
+HTTP PUT /petclinic/api/vets/1 {"id":0,"name":[]}
+HTTP POST /petclinic/api/vets {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":56,             "name":"test3"        }    ]}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP GET /petclinic/api/specialties/1?? {    "id":1,    "name":"fuzzstring2"}
+HTTP PUT /petclinic/api/pets/petid934ebdee8c { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/pets/petid8fde2d3ec7 { "fuzz": false }
+HTTP GET /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":0,            "name":"fuzzstring2"        }    ]}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/specialties {"id":[],"name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP GET /petclinic/api/users
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP GET /petclinic/api/specialties/1/?/ {    "id":56,    "name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":[]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":[]}
+HTTP POST /petclinic/api/users {"lastName":"fuzzstring"}
+HTTP PUT /petclinic/api/vets/1 {"lastName":[],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP GET /petclinic/api/pettypes {    "id":0,    "name":"fuzzstring2"}
+HTTP PUT /petclinic/api/pets/petid7233a5612 { "fuzz": true}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":56,            "name":"fuzzstring2"        }    ],    "username":"fuzzstring2"}
+HTTP GET /petclinic/api/pets/petidf1eb56f084 { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petidf1bee8efa56 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":false}
+HTTP POST /petclinic/api/users {"enabled":false,"password":false,"roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/owners/owneridf9fde5249c { "fuzz": false }
+HTTP PUT /petclinic/api/specialties/1?? {    "id":56,    "name":"Unknown"}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":"fuzzstring","lastName":"fuzzstring","specialties":[{"id":{ "fuzz" : false },"name":"fuzzstring"}]}
+HTTP GET /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP PUT /petclinic/api/pets/petid8fde2d1d8c { "fuzz": false }
+HTTP POST /petclinic/api/vets {"lastName":{ "fuzz" : false },"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP GET /petclinic/api/specialties/1 {    "id":6784,    "name":"fuzzstring2"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":{ "fuzz" : false },"roles":[{"name":"ROLE_0"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/specialties/1/?/ {    "id":56,    "name":"fuzzstring2"}
+HTTP GET /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petidc9f314eba1 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP GET /petclinic/api/vets/1 {"specialties":[{"name":0}]}
+HTTP POST /petclinic/api/visits {"description":{ "fuzz" : false },"date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":false}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"name":"ROLE_0"}],"username":0}
+HTTP GET /petclinic/api/pettypes {"name":false}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring","id":0}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":[]}
+HTTP GET /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":0}
+HTTP POST /petclinic/api/vets {    "firstName":"fuzzstring",    "lastName":"fuzzstring2",    "specialties":    [        {            "id":56,            "name":"test3"        }    ]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":{ "fuzz" : false },"name":"fuzzstring"}],"username":"fuzzstring"}
+HTTP GET /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"roles":[{"id":false,"name":false}]}
+HTTP PUT /petclinic/api/owners/owneridf21d548f8c { "fuzz": true}
+HTTP POST /petclinic/api/users {"password":{ "fuzz" : false },"roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP GET /petclinic/api/specialties/1 {"id":0}
+HTTP POST /petclinic/api/pettypes {"id":0,"name":"0"}
+HTTP GET /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":1,            "name":"fuzzstring2"        }    ]}
+HTTP GET /petclinic/api/vets/1 {"specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":false}
+HTTP PUT /petclinic/api/specialties/1?? {    "id":1,    "name":"fuzzstring2"}
+HTTP PUT /petclinic/api/specialties/1?? {    "id":6784,    "name":"test3"}
+HTTP GET /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring",    "id":56,    "pet":        { "fuzz": true}    }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"false"}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":56,            "name":"test3"        }    ],    "username":"test3"}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"fuzzstring","roles":[{ "fuzz" : false }],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":[{ "fuzz" : false }],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP GET /petclinic/api/visits/1
+HTTP PUT /petclinic/api/vets/1 {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petidca4a1613d6 { "fuzz": true}
+HTTP POST /petclinic/api/vets {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring","enabled":false,"password":"fuzzstring","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP GET /petclinic/api/users {"roles":[{"name":0}]}
+HTTP PUT /petclinic/api/pettypes/1 {"id":[],"name":"0"}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"false","roles":[{"name":"ROLE_0"}],"username":0}
+HTTP POST /petclinic/api/users {"password":"fuzzstring","roles":[{"name":[]}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":false,"roles":[{"id":[],"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP GET /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":false}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[0]}
+HTTP PUT /petclinic/api/vets/1 {"specialties":[{"id":0,"name":"fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/vets {"id":{ "fuzz" : false },"name":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petidc9c107d76 { "fuzz": false }
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":{ "fuzz" : false }]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":0,"username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":[],"lastName":"fuzzstring","specialties":[{"name":0}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":[],"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"roles":[[]],"username":"0"}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_0"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"name":"ROLE_0"}],"username":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP GET /petclinic/api/users {"roles":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring","id":0,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":{ "fuzz" : false },"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring","id":0,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"lastName":"fuzzstring","enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":{ "fuzz" : false },"specialties":"fuzzstring"}
+HTTP GET /petclinic/api/vets/1 {"specialties":[{"id":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[[]],"username":"0"}
+HTTP POST /petclinic/api/vets {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [         {             "id":56,             "name":"fuzzstring2"         }    ]}
+HTTP GET /petclinic/api/pets/1 {    "id":6784,    "name":"test3"}
+HTTP PUT /petclinic/api/pets/petidfdfd329ccd2 { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petidfdfd24974cc { "fuzz": true}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{ "fuzz" : false }]}
+HTTP POST /petclinic/api/visits {"description":{ "fuzz" : false },"date":"yyyy/MM/dd",    "description":"fuzzstring2",    "id":1,    "pet":        { "fuzz": false }    }
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_0"}],"username":false}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":"fuzzstring","lastName":"fuzzstring","specialties":[{"name":{ "fuzz" : false }}]}
+HTTP PUT /petclinic/api/pets/petidca4a1dd8b3 { "fuzz": false }
+HTTP GET /petclinic/api/specialties/1 [1, false]}
+HTTP POST /petclinic/api/pets/petidf1eb1d6d7 { "fuzz": true}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":0,"specialties":[{"name":{ "fuzz" : false }}]}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":"fuzzstring","lastName":"fuzzstring","specialties":[0]}
+HTTP POST /petclinic/api/vets {"specialties":[{"id":0,"name":"ROLE_0"}],"username":{ "fuzz" : false },"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/owners/owneridf9fde4d1b6 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":false,"roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/vets/1 {"id":{ "fuzz" : false },"name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"id":0}],"username":0}
+HTTP POST /petclinic/api/users {"roles":[{"id":{ "fuzz" : false }}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":"fuzzstring"}
+HTTP GET /petclinic/api/pets/pettypes/1 {    "id":6784,    "name":"fuzzstring2"}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"fuzzstring","roles":[{"name":"ROLE_false"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/specialties {"id":0,"name":"false"}
+HTTP DELETE /petclinic/api/users/1
+HTTP GET /petclinic/api/pets/pettypes {    "id":56,    "name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"0","roles":[{"id":0}],"username":"0"}
+HTTP PUT /petclinic/api/vets/1 {"specialties":[{"id":0,"name":"fuzzstring"}],"name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":"false","password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"username":{ "fuzz" : false },"password":"fuzzstring","roles":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP GET /petclinic/api/visits { "fuzz" : false }
+HTTP PUT /petclinic/api/vets/1 {"specialties":[{"id":0,"name":"fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":[]}]}
+HTTP GET /petclinic/api/vets/1 {"specialties":[{"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":0,"name":"ROLE_0"}],"username":"fuzzstring"}
+HTTP GET /petclinic/api/visits/?/1 { "fuzz" : false }
+HTTP PUT /petclinic/api/pets/petid7233f203f04 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":0,"password":"false","roles":0,"username":"0"}
+HTTP POST /petclinic/api/users {"password":"fuzzstring","roles":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"id":[],"date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"enabled":false,"password":false,"roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":0,"password":0,"roles":0,"username":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/pets/petid8e8703c1b { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"0","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":{ "fuzz" : false },"specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pettypes/1 {"id":{ "fuzz" : false }}
+HTTP PUT /petclinic/api/pets/petid026c7d91f4 { "fuzz": false }
+HTTP PUT /petclinic/api/owners/owneridf9fde3e7f7 { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"lastName":{ "fuzz" : false },"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pettypes/1 {"name":[]}
+HTTP PUT /petclinic/api/vets/1 {"lastName":{ "fuzz" : false },"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":[],"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":{ "fuzz" : false },"specialties":[{"id":[]}]}
+HTTP POST /petclinic/api/users {"roles":[{"id":[],"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_false"}],"username":false}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":false,"name":"ROLE_0"}],"username":0}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"enabled":false,"password":"fuzzstring","roles":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_0"}],"username":[]}
+HTTP POST /petclinic/api/vets {"id":[],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":"fuzzstring","name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":0,            "name":"fuzzstring2"        }    ]}
+HTTP POST /petclinic/api/vets {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":false}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":"fuzzstring","name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/vets {"lastName":{ "fuzz" : false },"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petid8a256bee2c { "fuzz": false }
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":0,"specialties":[{"id":[],"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/owners/owneridf9fde5249c1 { "fuzz": false }
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":"fuzzstring","lastName":"fuzzstring","specialties":[{"id":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":false}],"username":"false"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"name":"ROLE_0"}],"username":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"false","roles":[{"id":"fuzzstring","name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/owners/owneridf9fde2d1db6 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"name":0}],"username":"0"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":[]}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":0,"specialties":[{"name":[]}]}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":0}]}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":56,            "name":"Unknown"        }    ]}
+HTTP PUT /petclinic/api/pets/petidf68f15494f { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"firstName":[],"id":0,"lastName":"fuzzstring","specialties":[{"id":"fuzzstring","name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":[],"enabled":"false","enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":[],"enabled":false,"password":"fuzzstring","roles":{ "fuzz" : false }],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":{ "fuzz" : false }],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid5da9703f8 { "fuzz": true}
+HTTP PUT /petclinic/api/owners/owneridf9f222d621 { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":0,"specialties":[{"id":[],"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petid7233f329f04 { "fuzz": true}
+HTTP POST /petclinic/api/vets {"firstName":[],"id":0,"lastName":"fuzzstring","specialties":[{"id":{ "fuzz" : false },"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_f","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":{ "fuzz" : false },"roles":[{"name":"ROLE_f"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_f"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":{ "fuzz" : false }]}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":false,"lastName":"fuzzstring","specialties":[{"id":[]}]}
+HTTP POST /petclinic/api/users {"password":"fuzzstring","roles":[{"name":"ROLE_0"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":false}
+HTTP POST /petclinic/api/users {"enabled":false,"password":0,"roles":[{"id":0,"name":"ROLE_0"}],"username":0}
+HTTP PUT /petclinic/api/owners/owneridf9fde10d1c { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":"fuzzstring","lastName":"fuzzstring","specialties":[{"id":false}]}
+HTTP POST /petclinic/api/vets {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":[]}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":0}],"username":"0"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":{ "fuzz" : false },"id":0,"lastName":"fuzzstring","specialties":[{"id":[]}]}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{ "fuzz" : false }],"name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petid3dd6813d6f { "fuzz": false }
+HTTP POST /petclinic/api/users {"roles":[{"id":{ "fuzz" : false },"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"name":"ROLE_0"}],"username":false}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_0"}],"username":0}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_0"}],"enabled":false,"password":"fuzzstring","roles":[false],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":0,"name":0}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"fuzzstring","roles":[{"id":[]}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/owners/owneridf7233a41764 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"id":0}],"username":[]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":{ "fuzz" : false },"username":"false"}
+HTTP POST /petclinic/api/visits {"date":"fuzzstring","date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false },"name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":[],"roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":{ "fuzz" : false },"specialties":[{"id":[]}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":{ "fuzz" : false },"username":"false"}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring2",    "id":1,    "lastName":"fuzzstring",    "specialties":    [        {            "id":1,            "name":"fuzzstring2"        }    ]}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":false}]}
+HTTP PUT /petclinic/api/pets/petidc9c314eb1f { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"firstName":0,"id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":0}]}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"fuzzstring","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid5da8d1e7f8 { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petid6784809112 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":0,"roles":[{"id":0,"name":0}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":0,"name":false}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":false,"lastName":"fuzzstring","specialties":0}
+HTTP POST /petclinic/api/pettypes {"id":[],"name":"0"}
+HTTP POST /petclinic/api/users {"enabled":0,"enabled":false,"password":"false","roles":[{"id":"fuzzstring"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"fuzzstring","roles":[0],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":false}
+HTTP POST /petclinic/api/users {"enabled":[],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":false}],"username":"0"}
+HTTP PUT /petclinic/api/pets/petid3dd6813d6f { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"specialties":[{"id":false,"name":[]}]}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_0"}],"username":[]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[[]],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"id":0,"name":"ROLE_0"}],"enabled":false,"password":"0","roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/owners/owneridf7d7d91f8c { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petidf13d12d306f { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"id":"fuzzstring"}],"username":0}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring2"}],"enabled":false,"password":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"enabled":false,"password":"fuzzstring"}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":56,            "name":"fuzzstring2"        }    ]}
+HTTP POST /petclinic/api/users {"password":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":{ "fuzz" : false },"password":"fuzzstring",    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":1,            "name":"fuzzstring2"        }    ],    "username":"Unknown"}
+HTTP POST /petclinic/api/users {"roles":[{ "fuzz" : false }}]}
+HTTP PUT /petclinic/api/pets/petidca4f2572268 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":false,"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"name":"ROLE_fuzzstring"}],"username":"0"}
+HTTP PUT /petclinic/api/pets/petid6ca2d222f56 { "fuzz": true}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":{ "fuzz" : false }}]}
+HTTP PUT /petclinic/api/pets/petidca3dd682110 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[0],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"false","roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":56,            "name":"test3"        }    ],    "username":"fuzzstring2"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":{ "fuzz" : false }],"username":"0"}
+HTTP PUT /petclinic/api/pets/petidca4b8efa6 { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"id":0,"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/vets/1 {"lastName":{ "fuzz" : false },"name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_0"}],"username":[]}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"false","roles":[{"id":[],"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":false}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/owners/owneridf8dca67c7c { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petid214d8d3e7e1 { "fuzz": false }
+HTTP PUT /petclinic/api/specialties/1?injected_query_string=123
+HTTP PUT /petclinic/api/pets/petid8f27d222f08 { "fuzz": false }
+HTTP POST /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring2",    "id":5,    "pet":        { "fuzz": false }    }
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":false,"specialties":[{"id":0,"name":[]}]}
+HTTP PUT /petclinic/api/vets/1 {"firstName":0,"id":0,"lastName":"fuzzstring","specialties":[{"name":0}]}
+HTTP GET /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":1,            "name":"test3"        }    ],    "username":"test3"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_0"}],"username":false}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP POST /petclinic/api/users {"roles":[{"id":false,"name":"ROLE_0"}],"username":false}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":{ "fuzz" : false },"name":"ROLE_fuzzstring"}],"username":"false"}
+HTTP PUT /petclinic/api/vets/1 {"id":0,"name":"fuzzstring"}
+HTTP POST /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"test3",    "id":6784,    "pet":        { "fuzz": true}    }
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"fuzzstring","roles":[{"name":"ROLE_0"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":0,"roles":[{"name":0}],"username":"0"}
+HTTP PUT /petclinic/api/specialties/1?? {    "id":56,    "name":"fuzzstring2"}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"false","roles":[{"id":"fuzzstring","name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":0}
+HTTP GET /petclinic/api/owners/6787
+HTTP POST /petclinic/api/users {"enabled":[],"password":"false","roles":[{"id":"fuzzstring"}],"username":"0"}
+HTTP POST /petclinic/api/users {"roles":[0],"username":"0"}
+HTTP PUT /petclinic/api/pettypes/1 {"name":{ "fuzz" : false },"id":0,"name":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"lastName":{ "fuzz" : false },"specialties":[{"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petid1445876496 { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petid14efc17976 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"false","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"0"}
+HTTP PUT /petclinic/api/pets/petid8a257bee8c { "fuzz": true}
+HTTP POST /petclinic/api/visits {"id":"fuzzstring","date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[0]}
+HTTP PUT /petclinic/api/vets/1 {"name":false}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":{ "fuzz" : false },"specialties":[{"id":"fuzzstring"}]}
+HTTP PUT /petclinic/api/vets/1 {"firstName":false,"id":0,"lastName":"fuzzstring","specialties":[{"id":[],"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":[0]}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":0}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":0}
+HTTP PUT /petclinic/api/owners/owneridf9fde7233f5 { "fuzz": true}
+HTTP POST /petclinic/api/users {"roles":[{"id":{ "fuzz" : false },"name":"ROLE_fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":0,"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":false,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid8e9703f56 { "fuzz": false }
+HTTP PUT /petclinic/api/vets/1 {"firstName":[],"id":{ "fuzz" : false },"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP PUT /petclinic/api/visits
+HTTP POST /petclinic/api/visits {"date":{ "fuzz" : false },"date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false }}
+HTTP POST /petclinic/api/vets {"id":0,"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":0}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[[]]}
+HTTP POST /petclinic/api/users {"roles":0,"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":0,"roles":[{"id":"fuzzstring","name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"fuzzstring","roles":[[]]}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":{ "fuzz" : false }]}
+HTTP PUT /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring",    "id":56,    "pet":        { "fuzz": true}    }
+HTTP PUT /petclinic/api/owners/owneridf43db10d7c { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petidf43db22368 { "fuzz": true}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring2",    "roles":    [        {            "id":1,            "name":"fuzzstring2"        }    ],    "username":"test3"}
+HTTP POST /petclinic/api/users {"password":"fuzzstring","enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":0}
+HTTP POST /petclinic/api/users {"roles":[{"id":false,"name":"ROLE_0"}],"username":"false"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":{ "fuzz" : false },"lastName":"fuzzstring","specialties":[{"id":[]}]}
+HTTP PUT /petclinic/api/owners/ownerid3587e7d91 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_f","id":0,"name":"ROLE_f"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":{ "fuzz" : false },"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":"fuzzstring","username":"0"}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring",password":"0","roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/vets {"lastName":{ "fuzz" : false },"name":"fuzzstring"}
+HTTP PUT /petclinic/api/owners/owneridf9fde5233f7 { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petidc9d8eb2d1a { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":{ "fuzz" : false },"username":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_0"}],"username":{ "fuzz" : false }}
+HTTP PUT /petclinic/api/specialties/1/?/ {    "id":0,    "name":"fuzzstring2"}
+HTTP PUT /petclinic/api/specialties/1/?/ {    "id":6784,    "name":"Unknown"}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":false}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"id":0,"name":"ROLE_0"}],"username":0}
+HTTP PUT /petclinic/api/owners/owneridf21d14610f7 { "fuzz": true}
+HTTP PUT /petclinic/api/owners/ownerid59a2571032 { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petidf21d6d494f7 { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petid8e8703f59f { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":{ "fuzz" : false },"name":"fuzzstring2"}]}
+HTTP POST /petclinic/api/users {"password":"fuzzstring","enabled":false,"password":"fuzzstring","roles":[{"id":{ "fuzz" : false },"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/owners/ownerid4f257cc2f { "fuzz": true}
+HTTP PUT /petclinic/api/owners/owneridf9fde5257f { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":0}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"fuzzstring","roles":[{"name":"ROLE_0"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":[],"roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":{ "fuzz" : false },"password":"fuzzstring","roles":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid31467c8f08 { "fuzz": true}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":["fuzzstring"]]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":false,"roles":[{"id":0,"name":"ROLE_0"}],"username":0}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"false","roles":"{0}":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":"fuzzstring"}],"username":"0"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":"fuzzstring","lastName":"fuzzstring","specialties":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"specialties":[]}
+HTTP POST /petclinic/api/vets {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":0,            "name":"Unknown"        }    ]}
+HTTP PUT /petclinic/api/vets/1 {"id":[],"name":"fuzzstring"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":"fuzzstring","lastName":"fuzzstring","specialties":0}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"false","roles":[{"id":false}],"username":"0"}
+HTTP PUT /petclinic/api/pets/petidfdfd494f8c { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [         {             "id":6784,             "name":"fuzzstring2"         }    ]}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"Unknown",    "roles":    [        {            "id":1,            "name":"Unknown"        }    ],    "username":"fuzzstring"}
+HTTP PUT /petclinic/api/owners/ownerid3587f27368c { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petidfdfd494f15f { "fuzz": false }
+HTTP PUT /petclinic/api/vets/1 {"id":[],"firstName":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"username":{ "fuzz" : false },"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":{ "fuzz" : false },"roles":[{"id":[]}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid8fde7d3d7c { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petidf494f31d7f { "fuzz": true}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":6784,            "name":"fuzzstring2"        }    ],    "username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":[],"specialties":[{"id":"fuzzstring","name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":0,    "lastName":"fuzzstring",    "specialties":    [        {            "id":0,            "name":"fuzzstring2"        }    ]}
+HTTP PUT /petclinic/api/owners/owneridf9fde3d6c8 { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":2,            "name":"fuzzstring2"        }    ]}
+HTTP POST /petclinic/api/users {"password":"fuzzstring",    "enabled":true,    "password":"fuzzstring",    "roles":    [         {             "id":1,             "name":"test3"         }    ],    "username":"test3"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_0"}],"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"false","roles":[{"id":0,"name":false}],"username":"0"}
+HTTP PUT /petclinic/api/pets/petid1484afd6d8 { "fuzz": true}
+HTTP POST /petclinic/api/vets {"id":0,"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":[],"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petid3dd56f084f { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petid0f0f08d8f4f { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petid56f30610f04 { "fuzz": false }
+HTTP PUT /petclinic/api/owners/ownerid14b30610f04 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":[],"password":"fuzzstring","roles":[0],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[]]
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":{ "fuzz" : false },"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_false"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":[]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":"fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid4dd368f08 { "fuzz": false }
+HTTP POST /petclinic/api/pettypes {"name":{ "fuzz" : false },"id":0,"name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"0","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":0,             "name":"fuzzstring2"        }    ]}
+HTTP POST /petclinic/api/vets {"id":0,"name":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid967ca621d6 { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petid8a56bee8c5f { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petid8a56bee8c5f { "fuzz": true}
+HTTP PATCH /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring",    "id":56,    "pet":        { "fuzz": true}    }
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":false,"lastName":"fuzzstring","specialties":[{"name":false}]}
+HTTP PUT /petclinic/api/specialties/1?injected_query_string=123 {    "id":1,    "name":"test3"}
+HTTP PATCH /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":{ "fuzz" : false },"name":"fuzzstring"}]}
+HTTP PATCH /petclinic/api/users {"roles":[false]}
+HTTP PUT /petclinic/api/pets/petid1aec4d7e6f { "fuzz": true}
+HTTP PATCH /petclinic/api/pets/petidf21d597f08 { "fuzz": false }
+HTTP PUT /petclinic/api/users/1 {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":1,            "name":"Unknown"        }    ],    "username":"fuzzstring"}
+HTTP PUT /petclinic/api/specialties/1??
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_f"}],"username":"fuzzstring"}
+HTTP PATCH /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":[],"specialties":[{"id":0}]}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"false","roles":[{"name":[]}],"username":"0"}
+HTTP PUT /petclinic/api/pettypes/1 {"id":false}
+HTTP POST /petclinic/api/users {"roles":[{"id":{ "fuzz" : false },"name":"ROLE_fuzzstring"}],"username":false}
+HTTP PATCH /petclinic/api/vets/1 {"specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/vets/1 {"firstName":0,"id":0,"lastName":"fuzzstring","specialties":0}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}]}
+HTTP POST /petclinic/api/visits {"id":{ "fuzz" : false },"date":"fuzzstring","description":"fuzzstring2","id":0,"pet":{ "fuzz" : false }}
+HTTP PATCH /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":false}
+HTTP PUT /petclinic/api/owners/owneridf9fde7dca1c { "fuzz": false }
+HTTP PUT /petclinic/api/pettypes/1 {"id":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"id":0,"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring","name":"test3"}]}
+HTTP PATCH /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring",    "id":1,    "pet":        { "fuzz": true}    }
+HTTP POST /petclinic/api/users {"roles":[{"id":false,"name":"ROLE_fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"0","roles":[{"name":0}],"username":"0"}
+HTTP PATCH /petclinic/api/pets/petid5da3147416f { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":"fuzzstring","name":"ROLE_0"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid8f16d7e7d1f { "fuzz": false }
+HTTP PATCH /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/users/ownerid7233a41764 { "fuzz": false }
+HTTP PATCH /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petidf76ccd494f { "fuzz": true}
+HTTP PUT /petclinic/api/specialties/1?injected_query_string=123 {    "id":1,    "name":"Unknown"}
+HTTP PUT /petclinic/api/pets/petid5da9703f56 { "fuzz": false }
+HTTP PUT /petclinic/api/owners/owneridf731ea35ccf { "fuzz": false }
+HTTP POST /petclinic/api/users {"password":"fuzzstring","enabled":false,"password":"fuzzstring","roles":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP PATCH /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":[]}]}
+HTTP PUT /petclinic/api/pets/petid1496f5610 { "fuzz": false }
+HTTP PUT /petclinic/api/vets/1 {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":[]}]}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"false","roles":[{"id":"fuzzstring","name":"ROLE_0"}],"username":"false"}
+HTTP POST /petclinic/api/vets {"specialties":[{"id":0,"name":"fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"false"}
+HTTP PATCH /petclinic/api/pets/petid5da9703f56 { "fuzz": true}
+HTTP POST /petclinic/api/vets {"specialties":[{ "fuzz" : false }}]}
+HTTP PUT /petclinic/api/pets/petid69904f082 { "fuzz": false }
+HTTP PATCH /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring",    "id":0,    "pet":        { "fuzz": true}    }
+HTTP PUT /petclinic/api/pets/petid3587f27368 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":{ "fuzz" : false },"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/visits {"description":"fuzzstring","date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false },"name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0}],"username":{ "fuzz" : false }}
+HTTP PUT /petclinic/api/pets/petid8fde7e1d1cc { "fuzz": false }
+HTTP PUT /petclinic/api/vets/1 {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP PATCH /petclinic/api/users
+HTTP PUT /petclinic/api/owners/owneridf9fde5233a5 { "fuzz": false }
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"enabled":false,"password":"fuzzstring","roles":[0],"username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":1,            "name":"fuzzstring3"        }    ]}
+HTTP PATCH /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":false}
+HTTP POST /petclinic/api/users {"enabled":false,"password":[],"roles":[{"id":"fuzzstring","name":"ROLE_0"}],"username":"0"}
+HTTP PATCH /petclinic/api/pettypes/1 {"name":false}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_0"}],"username":{ "fuzz" : false },"password":"fuzzstring","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"fuzzstring","roles":[{"id":0,"name":false}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"name":"ROLE_fuzzstring"}],"username":0}
+HTTP PATCH /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PATCH /petclinic/api/specialties/1 {    "id":56,    "name":"fuzzstring2"}
+HTTP POST /petclinic/api/users {"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid5da359f56 { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petid1a107f359f { "fuzz": false }
+HTTP POST /petclinic/api/vets {"specialties":[{"id":0,"name":"fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":[],"name":"fuzzstring"}]}
+HTTP PATCH /petclinic/api/users {"enabled":false,"password":"0","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/pets/petid7233a41764 { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petid703 { "fuzz": false }
+HTTP PATCH /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring2",    "id":56,    "pet":        { "fuzz": false }    }
+HTTP PUT /petclinic/api/vets/1 {"lastName":{ "fuzz" : false },"date":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PATCH /petclinic/api/vets/1 {"specialties":[{"name":0}]}
+HTTP PUT /petclinic/api/pets/petid6ca2d96d91 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":[],"password":"fuzzstring","roles":[{"id":0}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"enabled":false,"password":"0"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":0}]}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"fuzzstring","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":{ "fuzz" : false },"password":"0","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/pettypes/1 {"id":false,"name":[]}
+HTTP PATCH /petclinic/api/vets/1 {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":{ "fuzz" : false }}]}
+HTTP PUT /petclinic/api/vets/1 {"name":[]}
+HTTP POST /petclinic/api/visits {"date":[],"date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false }}
+HTTP PATCH /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":{ "fuzz" : false }}]}
+HTTP PUT /petclinic/api/pets/petid6ca4068f7 { "fuzz": true}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":56,            "name":"Unknown"        }    ],    "username":"fuzzstring"}
+HTTP PATCH /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring2",    "id":56,    "pet":        { "fuzz": true}    }
+HTTP PATCH /petclinic/api/vets {"specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/owners/owneridf9fde6ec2 { "fuzz": false }
+HTTP PATCH /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring",    "id":6784,    "pet":        { "fuzz": false }    }
+HTTP PATCH /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":56,            "name":"fuzzstring2"        }    ]}
+HTTP POST /petclinic/api/visits {"description":"fuzzstring","date":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/owners/owneridca4a15dc5c4 { "fuzz": true}
+HTTP PATCH /petclinic/api/pettypes {"id":0,"name":"fuzzstring"}
+HTTP PUT /petclinic/api/owners/owneridf8dca35ccf7 { "fuzz": true}
+HTTP POST /petclinic/api/users {"password":"fuzzstring","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PATCH /petclinic/api/vets/1 {"specialties":[{"name":[]}]}
+HTTP PATCH /petclinic/error    }
+HTTP PATCH /petclinic/api/vets/1 {"id":0}
+HTTP POST /petclinic/api/specialties {"id":"fuzzstring","name":0}
+HTTP PATCH /petclinic/api/specialties/1/?/ {    "id":56,    "name":"test3"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_0"}],"username":0}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0],"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/pets/petidf222a1612f1 { "fuzz": false }
+HTTP PATCH /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP PUT /petclinic/api/users/1 {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":56,            "name":"test3"        }    ],    "username":"Unknown"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":[],"lastName":"fuzzstring","specialties":[{"id":"fuzzstring"}]}
+HTTP PATCH /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[false]}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":6784,            "name":"fuzzstring2"        }    ],    "username":"fuzzstring2"}
+HTTP POST /petclinic/api/users {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP PATCH /petclinic/api/visits {"id":0}
+HTTP PUT /petclinic/api/owners/ownerid14b30610f7 { "fuzz": true}
+HTTP PUT /petclinic/api/owners/owneridf43ca5249c { "fuzz": false }
+HTTP PUT /petclinic/api/pettypes/1 {"id":0,"name":"false"}
+HTTP PUT /petclinic/api/owners/owneridf43db8d91f { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"fuzzstring","roles":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"firstName":[],"id":0,"lastName":"fuzzstring","specialties":[{"id":"fuzzstring","name":"fuzzstring"}]}
+HTTP PATCH /petclinic/api/vets/1 {"id":0,"name":"fuzzstring"}
+HTTP POST /petclinic/api/vets {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":56,            "name":"fuzzstring"        }    ]}
+HTTP PATCH /petclinic/api/vets/1 {"specialties":[{"id":false,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/vets/1 {"firstName":0,"id":0,"lastName":"fuzzstring","specialties":[{"id":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_0"}]}
+HTTP PATCH /petclinic/api/vets/1 {"specialties":[{"id":0}]}
+HTTP PUT /petclinic/api/pets/petid8e7dca2f56 { "fuzz": false }
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":false,"lastName":"fuzzstring","specialties":[[]]}
+HTTP PATCH /petclinic/api/users {"enabled":0,"password":"0","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/pets/petid8fba314f7d { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"lastName":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_fuzzstring"}],"username":[]}
+HTTP PATCH /petclinic/api/vets/1 {"pet":0}
+HTTP PATCH /petclinic/api/pettypes/1 {    "id":6784,    "name":"fuzzstring2"}
+HTTP PATCH /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"0","roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP PATCH /petclinic/api/pets/petidf29494f16c2 { "fuzz": false }
+HTTP PATCH /petclinic/api/pettypes {"name":0}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":false,"specialties":[{"id":"fuzzstring","name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":[],"name":"ROLE_0"}],"username":0}
+HTTP POST /petclinic/api/visits {"date":"fuzzstring","description":"fuzzstring","id":{ "fuzz" : false },"name":"fuzzstring"}
+HTTP PATCH /petclinic/api/pets/1 {    "id":56,    "name":"Unknown"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":[]}]}
+HTTP PUT /petclinic/api/vets/1 {"firstName":{ "fuzz" : false },"id":0,"lastName":"fuzzstring","specialties":[{ "fuzz" : false }]}
+HTTP DELETE /petclinic/api/specialties/1 {    "id":56,    "name":"fuzzstring2"}
+HTTP POST /petclinic/api/pettypes { "fuzzstring"}
+HTTP POST /petclinic/api/users {"username":"fuzzstring","enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":false,"lastName":"fuzzstring","specialties":[{"id":"fuzzstring"}]}
+HTTP PUT /petclinic/api/owners/owneridf9fde2d9f8f { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP DELETE /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{ "fuzz" : false }]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[[]]", "username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"enabled":false,"password":"fuzzstring","roles":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP DELETE /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"roles":[{"id":{ "fuzz" : false },"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/vets {"firstName":{ "fuzz" : false },"id":0,"lastName":"fuzzstring","specialties":[{ "fuzz" : false }]}
+HTTP PUT /petclinic/api/owners/ownerid40aec7d6b5 { "fuzz": true}
+HTTP PUT /petclinic/api/owners/ownerid731aa25612 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":false,"roles":0}
+HTTP POST /petclinic/api/users {"name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring","enabled":false,"password":"fuzzstring","roles":"fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"pet":{ "fuzz" : false }}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":false,"lastName":"fuzzstring","specialties":[{"name":[]}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring","enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring","enabled":"fuzzstring","enabled":"fuzzstring","enabled":"fuzzstring","roles":"fuzzstring"}
+HTTP DELETE /petclinic/api/owners/5
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":[],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/users/1 {"roles":[false]}
+HTTP DELETE /petclinic/api/visits/1 {"description":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":{ "fuzz" : false }}]}
+HTTP PUT /petclinic/api/vets/1 {"lastName":[],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":0}],"username":[]}
+HTTP DELETE /petclinic/api/visits
+HTTP DELETE /petclinic/api/pettypes/1 { "fuzz" : false }
+HTTP POST /petclinic/api/visits {"description":{ "fuzz" : false },"date":"fuzzstring2","description":"fuzzstring2","id":0,"pet":        { "fuzz": true}    }
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":[]}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"0","roles":[{"name":0}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":false,"username":"false"}
+HTTP PUT /petclinic/api/pettypes/1??
+HTTP DELETE /petclinic/api/specialties
+HTTP PUT /petclinic/api/owners/owneridf43db5233f { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petidca4a366921 { "fuzz": true}
+HTTP PUT /petclinic/api/owners/ownerid13ce238f8 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":"fuzzstring"}],"name":"ROLE_0"}],"username":false}
+HTTP POST /petclinic/api/specialties {"id":false,"name":[]}
+HTTP POST /petclinic/api/users {"enabled":{ "fuzz" : false },"password":"0","roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP DELETE /petclinic/api/users
+HTTP PUT /petclinic/api/pets/petid8fde2a5e7d { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":0}],"username":false}
+HTTP PUT /petclinic/api/pets/petid8fde2a5e7d1 { "fuzz": false }
+HTTP PUT /petclinic/api/owners/owneridf359f107f1c { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"fuzzstring","roles":[{"id":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"enabled":false,"password":"fuzzstring","roles":[{"id":"fuzzstring"}],"username":"fuzzstring"}
+HTTP DELETE /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[0]}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":6784,            "name":"Unknown"        }    ]}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petid9f359f36c5 { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petid8aec2d597f { "fuzz": false }
+HTTP DELETE /petclinic/api/owners/owneridf2a56ccd222 }
+HTTP PUT /petclinic/api/specialties/1/1 {    "id":6784,    "name":"fuzzstring2"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":0,"roles":[{"id":0,"name":"ROLE_0"}],"username":[]}
+HTTP DELETE /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid3dd6101f08 { "fuzz": false }
+HTTP POST /petclinic/api/pettypes {"id":0,"name":"ROLE_fuzzstring"}
+HTTP POST /petclinic/api/visits {"date":"fuzzstring","date":"fuzzstring","description":"fuzzstring2","id":0,"pet":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"enabled":false,"enabled":false,"password":"fuzzstring","roles":false,"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"enabled":0,"password":"false","roles":[{"name":"ROLE_0"}],"username":0}
+HTTP POST /petclinic/api/users {"enabled":false,"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":0}
+HTTP DELETE /petclinic/api/specialties/1 {"name":[]}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":false,"lastName":"fuzzstring","specialties":[{"id":0,"name":0}]}
+HTTP PUT /petclinic/api/vets/1 {"name":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"enabled":false,"password":false,"roles":[{"id":{ "fuzz" : false }}],"username":"0"}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":[],"specialties":[{"id":{ "fuzz" : false },"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/owners/ownerid13cee5d494 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":{ "fuzz" : false },"roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":0,"roles":[[]],"username":"0"}
+HTTP GET /petclinic/api/specialties/1?injected_query_string=123 {    "id":1,    "name":"fuzzstring2"}
+HTTP DELETE /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":0}
+HTTP POST /petclinic/api/users {"password":"fuzzstring","enabled":false,"password":"0","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":56,            "name":"fuzzstring2"        }    ],    "username":"Unknown"}
+HTTP DELETE /petclinic/api/vets/1 {"specialties":[{"name":{ "fuzz" : false }}]}
+HTTP POST /petclinic/api/vets {"firstName":false,"id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":[]}]}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_f"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid8f6dca16ccf { "fuzz": false }
+HTTP POST /petclinic/api/visits {"id":{ "fuzz" : false },"date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false }}
+HTTP PUT /petclinic/api/vets/1 {"id":0,"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":[]}]}
+HTTP PUT /petclinic/api/users/ownerid14afc107f7 { "fuzz": false }
+HTTP DELETE /petclinic/api/specialties/1 {"id":0,"name":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petidf699d548f8 { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":[],"specialties":[{"id":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petidf69ccd548 { "fuzz": true}
+HTTP POST /petclinic/api/owners {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":1,            "name":"Unknown"        }    ],    "username":"Unknown"}
+HTTP DELETE /petclinic/api/specialties/1/1
+HTTP POST /petclinic/api/specialties {"id":"fuzzstring,"name":"fuzzstring"}
+HTTP DELETE /petclinic/api/specialties/1 {    "id":56,    "name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_0"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_f"}],"username":{ "fuzz" : false }}
+HTTP DELETE /petclinic/api/vets/1 {"specialties":[{"id":"fuzzstring"}]}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":false,"specialties":[{"id":0,"name":false}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":"fuzzstring","username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring","id":0,"name":"ROLE_fuzzstring"}]}
+HTTP POST /petclinic/api/users {"roles":{ "fuzz" : false },"username":"0"}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":[]}
+HTTP PUT /petclinic/api/pets/petidc9703a4e7f { "fuzz": false }
+HTTP DELETE /petclinic/api/pets/1 {"id":0}
+HTTP POST /petclinic/api/users {"username":"false"}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [         {             "id":0,             "name":"fuzzstring2"        }    ]}
+HTTP PUT /petclinic/api/specialties/1?? {    "id":1,    "name":"test3"}
+HTTP DELETE /petclinic/api/owners/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"fuzzstring","roles":0}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":0,            "name":"test3"        }    ],    "username":"test3"}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring2",    "roles":    [        {            "id":1,             "name":"test3"         }    ],    "username":"test3"}
+HTTP POST /petclinic/api/users {"enabled":true,"password":"fuzzstring","roles":[{"id":{ "fuzz" : false },"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP DELETE /petclinic/api/vets
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring2",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":1,            "name":"fuzzstring2"        }    ]}
+HTTP OPTION/1 [{ "fuzz" : false }]
+HTTP OPTION /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":[]}],"username":"0"}
+HTTP OPTION /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP OPTION /petclinic/error
+HTTP OPTION /petclinic/api/pets/petid7233f27d5f { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":0,"name":[]}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/specialties/1?? {    "id":6784,    "name":"fuzzstring2"}
+HTTP POST /petclinic/api/vets {"specialties":[{"id":0,"name":"fuzzstring","id":0,"name":"fuzzstring"}]}
+HTTP OPTION /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/visits {"description":"fuzzstring","date":"fuzzstring","description":"fuzzstring","id":0,"pet":"fuzzstring"}
+HTTP OPTION /petclinic/api/vets/1 {"specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petid7233f329f08 { "fuzz": false }
+HTTP PUT /petclinic/api/vets/1 {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":{ "fuzz" : false }}]}
+HTTP OPTION /petclinic/api/pets/petidc8d7e257ccf { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petid8aec7494f1 { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petid8aec7494f1 { "fuzz": false }
+HTTP PUT /petclinic/api/users/ownerid7233a41776 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":false}
+HTTP PUT /petclinic/api/vets/1 {"name":"fuzzstring"}
+HTTP OPTION : /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":0,"specialties":[{"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":{ "fuzz" : false },"roles":[{"id":{ "fuzz" : false }}],"username":"fuzzstring"}
+HTTP OPTION /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":{ "fuzz" : false },"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petidfdfd683f08 { "fuzz": true}
+HTTP POST /petclinic/api/vets {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":56,            "name":"Unknown"        }    ]}
+HTTP OPTION | HEAD /petclinic/error
+HTTP POST /petclinic/api/users {"roles":[{"name":{ "fuzz" : false }}
+HTTP PUT /petclinic/api/specialties/{}
+HTTP PUT /petclinic/api/owners/owneridf9fde7d1db { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":0,"password":"fuzzstring","roles":[[]],"username":"fuzzstring"}
+HTTP OPTION /petclinic/api/pets/1 {    "id":1,    "name":"fuzzstring2"}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"0","roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/owners/ownerid14b1231069 { "fuzz": false }
+HTTP OPTION /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/vets/1 {"specialties":[{ "fuzz" : false }}]}
+HTTP POST /petclinic/api/vets {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[0]}
+HTTP OPTION /petclinic/api/vets/1 {"specialties":[{"name":false}]}
+HTTP POST /petclinic/api/users {"enabled":false,"enabled":false,"password":"fuzzstring","roles":[{"id":0,"name":"ROLE_f"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/vets {"specialties":[{"id":0,"name":"fuzzstring"}],"name":"fuzzstring"}
+HTTP OPTION /petclinic/api/vets/1 {"specialties":[{"name":[]}]}
+HTTP PUT /petclinic/api/users/56
+HTTP POST /petclinic/api/users {"password":"fuzzstring","roles":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP OPTION /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        { "fuzz" : false }    ]}
+HTTP POST /petclinic/api/vets {"lastName":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP POST /petclinic/api/pettypes {"id":0,"name":"false"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP OPTION /petclinic/api/vets/1 {"specialties":[{"name":0}]}
+HTTP OPTION /petclinic/api/vets/1 {"specialties":[{"id":{ "fuzz" : false }}]}
+HTTP PUT /petclinic/api/pets/petid14afd8d6a8 { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petid1687f27368c { "fuzz": true}
+HTTP OPTION /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":[]}]}
+HTTP POST /petclinic/api/visits {"description":"fuzzstring","date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false },"username":"fuzzstring"}
+HTTP OPTION /petclinic/api/vets/1 {"specialties":[{"id":false,"name":"fuzzstring"}]}
+HTTP OPTION_FILES : {    "id":56,    "name":"fuzzstring2"}
+HTTP PUT /petclinic/api/pets/petidd934ebd494f { "fuzz": false }
+HTTP OPTION /petclinic/api/specialties {    "id":56,    "name":"fuzzstring2"}
+HTTP OPTION_FOR_APP_HTTP PUT /petclinic/api/vets/1 {"specialties":[{"id":0,"name":0}]}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"false","roles":[{ "fuzz" : false }],"username":"0"}
+HTTP OPTION_FOR_HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":1,            "name":"fuzzstring2"        }    ],    "username":"test3"}
+HTTP OPTION_FILES /petclinic/api/pets/1
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"name":[]}],"username":"0"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_0"}],"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_0"}],"username":"fuzzstring"}
+HTTP OPTION /petclinic/?/lastname
+HTTP OPTION /petclinic/api/vets/1 {"specialties":[{"id":0,"name":0}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[[]),"username":"0"}
+HTTP OPTION |        {           "id":1,            "name":"Unknown"        }    ]}
+HTTP POST /petclinic/api/users {"roles":[{"id":false,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"name":"ROLE_fuzzstring"}],"username":{ "fuzz" : false },"password":"false","roles":[{"name":"ROLE_fuzzstring"}],"username":"0"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":{ "fuzz" : false },"specialties":[{"id":0,"name":"fuzzstring2"}]}
+HTTP GET /petclinic/api/pets/petid0
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":0,"specialties":[{"id":0,"name":0}]}
+HTTP PUT /petclinic/api/pets/petid8e192a4d5c { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petid8e192a4d5c { "fuzz": false }
+HTTP OPTION /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring",    "specialties":    [        {            "id":1,            "name":"Unknown"        }    ]}
+HTTP OPTIONS /petclinic/api/owners/owneridf8f146d6b { "fuzz": true}
+HTTP GET /petclinic/api/pets/petidfuzz5caddb8f8 { "fuzz": false }
+HTTP POST /petclinic/api/visits {"description":"fuzzstring","date":"fuzzstring","description":"fuzzstring","description":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":"fuzzstring","name":"fuzzstring"}]}
+HTTP OPTION_FOR_HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP PUT /petclinic/api/vets/1 {"specialties":[{"id":0,"name":"fuzzstring"}],"name":"fuzzstring"}]}
+HTTP OPTION_Fuzzstring { "fuzz" : false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[fuzzstring]}
+HTTP POST /petclinic/api/vets {"name":false}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":0,"specialties":[{"id":0,"name":{ "fuzz" : false }}]}
+HTTP POST /petclinic/api/pettypes {    "id":0,    "name":"fuzzstring2"         { "fuzz": false }    }
+HTTP OPTION (1) {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring",    "specialties":    [        {            "id":1,            "name":"fuzzstring2"        }    ]}
+HTTP PUT /petclinic/api/owners/ownerid3587f7489 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"false"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":false,"roles":[{"name":"ROLE_0"}],"username":false}
+HTTP OPTION /petclinic/api/specialties {    "id":1,    "name":"fuzzstring2"}
+HTTP PUT /petclinic/api/pets/petid8f203a8f8 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":false}
+HTTP PUT /petclinic/api/vets/1 {"id":0,"firstName":[],"id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP OPTION /petclinic/api/vets {"specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/vets {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":56,            "name":"fuzzstring2"        }    ]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[[]],"username":"false"}
+HTTP POST /petclinic/api/users {"enabled":false,"enabled":false,"password":"false","roles":[{"id":[],"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/pettypes {"id":[],"name":"fuzzstring"}
+HTTP OPTION /petclinic/api/specialties/1 {    "id":56,    "name":"test3"}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"false","roles":[{"name":"ROLE_0"}],"username":false}
+HTTP POST /petclinic/api/users {"enabled":{ "fuzz" : false },"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP POST /petclinic/api/users {"roles":[]]}
+HTTP PUT /petclinic/api/pets/petid7233f32976 { "fuzz": false }
+HTTP PUT /petclinic/api/users/1 {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":56,            "name":"fuzzstring2"        }    ]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{ "f" : false }],"username":"fuzzstring"}
+HTTP OPTION_STRING /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":0}
+HTTP OPTION_FILES /petclinic/api/pets/1 {"id":0}
+HTTP OPTION PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP PUT /petclinic/api/owners/ownerid1aec2d7e3c { "fuzz": false }
+HTTP POST /petclinic/api/specialties {"id":0,"name":"0"}
+HTTP OPTION | DELETE /petclinic/api/vets/1 {"specialties":[{"name":{ "fuzz" : false }}]}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":56,            "name":"test3"        }    ]}
+HTTP POST /petclinic/api/visits {"date":"fuzzstring","date":"fuzzstring","description":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP OPTION_FILTER_Fuzzstring { "fuzz" : false }
+HTTP OPTION
+HTTP PUT /petclinic/api/pettypes/1?? {    "id":56,    "name":"fuzzstring2"}
+HTTP OPTION /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring",    "id":56,    "pet":        { "fuzz": true}    }
+HTTP POST /petclinic/api/pettypes {"id":false,"name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":false,"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"false"}
+HTTP PUT /petclinic/api/pets/petid8f1bee1c8c { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petid59f30610f8 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":[],"password":"false","roles":[{"id":0,"name":"ROLE_0"}],"username":"false"}
+HTTP POST /petclinic/api/pettypes {"id":0,"name":"false"}
+HTTP POST /petclinic/api/users {"password":"fuzzstring","username":"fuzzstring"}
+HTTP OPTION /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":{ "fuzz" : false },"specialties":[{"id":0}]}
+HTTP PUT /petclinic/api/pets/petidf9fca314eba2 { "fuzz": false }
+HTTP OPTION /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP OPTION /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":false}]}
+HTTP PUT /petclinic/api/vets/1 {"id":0,"lastName":0}
+HTTP HEAD /petclinic/api/visits {"date":0}
+HTTP PUT /petclinic/api/vets/1 {"specialties":[{"id":[],"name":"fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0}]}
+HTTP PUT /petclinic/api/pets/petid56adc314e7 { "fuzz": false }
+HTTP PUT /petclinic/api/owners/owneridf8dca69021d { "fuzz": false }
+HTTP POST /petclinic/api/pettypes {"id":0,"name":"ROLE_fuzzstring"}],"enabled":false,"password":"fuzzstring","roles":[[]],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/owners/ownerid13ce7233f7 { "fuzz": true}
+HTTP HEAD /petclinic/api/visits
+HTTP PUT /petclinic/api/pets/petid8e3f91e7d1f { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petid8a107f28ef4b { "fuzz": false }
+HTTP POST /petclinic/api/users {"password":"fuzzstring","enabled":false,"password":"fuzzstring","roles":[[]],"username":"fuzzstring"}
+HTTP HEAD /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":1,            "name":"fuzzstring2"        }    ],    "username":"test3"}
+HTTP HEAD /petclinic/api/users {"enabled":[],"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid5ddd5c8c8c { "fuzz": false }
+HTTP HEAD /petclinic/api/visits {"id":0}
+HTTP PUT /petclinic/api/pets/petidfdfd494f14 { "fuzz": true}
+HTTP HEAD /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring2",    "id":56,    "pet":        { "fuzz": true}    }
+HTTP PUT /petclinic/api/owners/owneridf9fde548b1 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":"fuzzstring","name":"ROLE_fuzzstring"}],"username":"0"}
+HTTP HEAD /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring",    "id":56,    "pet":        { "fuzz": false }    }
+HTTP POST /petclinic/api/vets {    "firstName":"fuzzstring2",    "id":1,    "lastName":"fuzzstring",    "specialties":    [        {            "id":1,            "name":"fuzzstring2"        }    ]}
+HTTP PUT /petclinic/api/specialties/1?? {    "id":56,    "name":"test3"}
+HTTP POST /petclinic/api/pettypes {"id":0,"name":"false"}],"username":"0"}
+HTTP HEAD /petclinic/api/users {"username":false}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":{ "fuzz" : false },"specialties":[{"id":"fuzzstring","name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petid1a026f082 { "fuzz": true}
+HTTP HEAD /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petid7233f314e1 { "fuzz": true}
+HTTP POST /petclinic/error { "fuzz": false }
+HTTP POST /petclinic/error { "fuzz" : false }
+HTTP PUT /petclinic/error/petidf1da8d8f7f { "fuzz": false }
+HTTP PUT /petclinic/error/petidf21d54890 { "fuzz": false }
+HTTP PUT /petclinic/error/petidf1dfd494f8 { "fuzz": false }
+HTTP PUT /petclinic/error/petidf21d54890 { "fuzz": true}
+HTTP POST /petclinic/error/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/error/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP POST /petclinic/error/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring",    "id":56,    "pet":        { "fuzz": true}    }
+HTTP PUT /petclinic/error/petidc9c8d368 { "fuzz": false }
+HTTP PUT /petclinic/error/vets/1 {"specialties":[{"id":false}]}
+HTTP PUT /petclinic/error/owners/ownerid14b30610f7 { "fuzz": true}
+HTTP PUT /petclinic/error/specialties/1 {    "id":1,    "name":"test3"}
+HTTP PUT /petclinic/error/specialties/1 {    "id":1,    "name":"fuzzstring2"}
+HTTP PUT /petclinic/error/specialties/1 {    "id":56,    "name":"fuzzstring"}
+HTTP HEAD /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petidc9c597f8b { "fuzz": true}
+HTTP POST /petclinic/api/visits {"description":[],"date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"username":"fuzzstring","enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":[],"id":0,"lastName":"fuzzstring","specialties":[{"id":"fuzzstring"}]}
+HTTP POST /petclinic/api/vets {"lastName":"fuzzstring","firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":"fuzzstring","name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/pets/petid934roles/1 {    "id":1,    "name":"Unknown"}
+HTTP HEAD /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}]}
+HTTP HEAD /petclinic/api/users {"enabled":[]}
+HTTP HEAD /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[],"username":"fuzzstring"}
+HTTP POST /petclinic/api/specialties {"id":[],"id":0,"name":"fuzzstring"}
+HTTP HEAD /petclinic/api/pettypes {"name":false}
+HTTP HEAD /petclinic/api/vets {"specialties":[{"id":0}]}
+HTTP PUT /petclinic/api/vets/1 {"id":0,"firstName":"fuzzstring","lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/owners/owneridf8dca1339f { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring2",    "specialties":    [        {            "id":0,            "name":"fuzzstring"        }    ]}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":0,            "name":"fuzzstring2"        }    ],    "username":"fuzzstring"}
+HTTP HEAD /petclinic/api/users {"roles":[{"id":0,"name":false}]}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":false,"specialties":[{"id":"fuzzstring"}]}
+HTTP HEAD /petclinic/api/pets/1 {"id":"fuzzstring","name":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid8aeba5f1ccb { "fuzz": true}
+HTTP POST /petclinic/api/specialties {"id":false,"name":false}
+HTTP PUT /petclinic/api/vets/1 {"specialties":[{"id":[],"name":"fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":{ "fuzz" : false },"password":"fuzzstring","roles":[{"id":{ "fuzz" : false },"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid5da9257a0 { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":{ "fuzz" : false },"specialties":[{"id":[0]}]}
+HTTP POST /petclinic/api/vets {"firstName":[],"id":0,"lastName":"fuzzstring","specialties":[{"id":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"roles":[{"id":false,"name":"ROLE_fuzzstring"}],"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/owners/ownerid731aa2561264 { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petid5da9703f27 { "fuzz": true}
+HTTP HEAD /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":[]}]}
+HTTP PUT /petclinic/api/pets/petidca4a286921 { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petidca4a1615th { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":"fuzzstring"}],"enabled":false,"password":"0"}
+HTTP HEAD /petclinic/api/specialties/1 {"id":0,"name":"fuzzstring"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":0,"id":0,"lastName":"fuzzstring","specialties":"fuzzstring"}
+HTTP PUT /petclinic/api/owners/owneridf9fde7d2f7 { "fuzz": true}
+HTTP PUT /petclinic/api/vets/1 {"id":[],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/visits/1 {"date":"fuzzstring","date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false }}
+HTTP PUT /petclinic/api/pets/petid9233a41764 { "fuzz": false }
+HTTP HEAD /petclinic/api/users
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":{ "fuzz" : false },"specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"name":"ROLE_0"}],"username":0}
+HTTP PUT /petclinic/api/pets/petidfdfd1ca3dbc6 { "fuzz": false }
+HTTP HEAD /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/users/owners/ownerid3c107f359f { "fuzz": false }
+HTTP HEAD /petclinic/api/vets {"specialties":[{"id":0,"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/owners/ownerid69996e7d1 { "fuzz": false }
+HTTP PUT /petclinic/api/owners/owneridf8dca7233f7 { "fuzz": false }
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":false,"lastName":"fuzzstring","specialties":[{"id":{ "fuzz" : false },"name":"fuzzstring"}]}
+HTTP HEAD /petclinic/api/visits {"id":false}
+HTTP POST /petclinic/api/users {"enabled":false,"enabled":false,"password":"false","roles":[{"name":"ROLE_0"}],"username":"0"}
+HTTP PUT /petclinic/api/owners/owneridf8dca4256f { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[{"id":[]}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/visits {"date":{ "yyyy/MM/dd", "yyyy/MM/dd", "yyyy/MM/dd"}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"fuzzstring","roles":0,"username":"fuzzstring"}
+HTTP PUT /petclinic/api/specialties/1?injected_query_string=123 {    "id":1,    "name":"fuzzstring2"}
+HTTP PUT /petclinic/api/owners/owneridf9fde5249a2 { "fuzz": true}
+HTTP HEAD /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring",    "id":0,    "pet":        { "fuzz": true}    }
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":[],"name":"ROLE_0"}],"username":"false"}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"false","roles":[{"name":"ROLE_0"}],"username":0}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":0,"name":{ "fuzz" : false }}],"username":"0"}
+HTTP POST /petclinic/api/users {"roles":[{"id":0,"name":"ROLE_fuzzstring"}],"name":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":0,"password":"fuzzstring","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP POST /petclinic/api/visits {"date":{ "fuzz" : false },"date":"yyyy/MM/dd",    "description":"fuzzstring2",    "id":1,    "pet":        { "fuzz": true}    }
+HTTP HEAD /petclinic/api/users {"enabled":[],"password":"0","roles":[{"id":0,"name":"ROLE_0"}],"username":"0"}
+HTTP HEAD /petclinic/api/users {"enabled":"fuzzstring","password":"false","roles":"ROLE_0","username":"0"}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_0"}],"username":false}]}
+HTTP HEAD /petclinic/api/visits {"description":false}
+HTTP POST /petclinic/api/users {"roles":[[]],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid8aec1eb1d6 { "fuzz": false }
+HTTP HEAD /petclinic/api/vets {"specialties":[{"id":0,"name":0}]}
+HTTP HEAD /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring",    "id":56,    "pet":        { "fuzz": true}    }
+HTTP POST /petclinic/api/specialties {"id":[],"name":"0"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"false","roles":[{"id":{ "fuzz" : false }}],"username":"0"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":0,"id":0,"name":"fuzzstring"}]}
+HTTP POST /petclinic/api/users {    "enabled":true,    "password":"fuzzstring",    "roles":    [        {            "id":56,            "name":"test3"        }    ],    "username":"fuzzstring"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":{ "fuzz" : false },"roles":[{"id":"fuzzstring","name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP HEAD /petclinic/api/visits {"date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false }}
+HTTP PUT /petclinic/api/pets/petid214d306f04f { "fuzz": false }
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":false,"lastName":"fuzzstring","specialties":[{"id":"fuzzstring"}]}
+HTTP HEAD /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":0}
+HTTP POST /petclinic/api/users {"roles":[{    "id":6784,    "name":"test3"}
+HTTP POST /petclinic/api/users {"enabled":false,"password":"fuzzstring","roles":[ [   ]{    "id":0,    "name":"test3"}
+HTTP PUT /petclinic/api/pets/petidf9f257f56 { "fuzz": true}
+HTTP POST /petclinic/api/users {"password":[],"roles":[{"id":0,"name":"ROLE_0"}],"username":"false"}
+HTTP POST /petclinic/api/vets {"specialties":[{"id":0,"name":"fuzzstring"}],"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":0,"name":0}]}
+HTTP PUT /petclinic/api/pets/petid7233a36368 { "fuzz": false }
+HTTP HEAD /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"id":[]}]}
+HTTP HEAD /petclinic/api/vets {"owner":"fuzzstring"}
+HTTP PUT /petclinic/api/pets/petid4fdfd1db5f { "fuzz": false }
+HTTP PUT /petclinic/api/pets/petid080e7233f7 { "fuzz": false }
+HTTP HEAD /petclinic/api/visits {"firstName":"fuzzstring","id":0,"lastName":"fuzzstring","specialties":[{"name":0}]}
+HTTP PUT /petclinic/api/pets/petid8fba4f16c5 { "fuzz": false }
+HTTP POST /petclinic/api/users {"enabled":"fuzzstring","password":"false","roles":[{"name":"ROLE_fuzzstring"}],"username":"0"}
+HTTP HEAD /petclinic/api/vets {"specialties":[{"id":false}]}
+HTTP POST /petclinic/api/vets {"firstName":"fuzzstring","id":0,"lastName":[],"specialties":[{"id":{ "fuzz" : false }}]}
+HTTP PUT /petclinic/api/pets/petid8f9703f56 { "fuzz": true}
+HTTP PUT /petclinic/api/pets/petid1a04fca0f5 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"false","roles":[{"id":0,"name":"ROLE_fuzzstring"}],"username":"fuzzstring"}
+HTTP PUT /petclinic/api/vets/1 {"firstName":"fuzzstring","id":false,"lastName":"fuzzstring","specialties":[{"id":[],"name":"fuzzstring"}]}
+HTTP PUT /petclinic/api/owners/ownerid8f107f16d6 { "fuzz": true}
+HTTP POST /petclinic/api/users {"enabled":[],"password":"false","roles":[{"id":[],"name":"ROLE_0"}],"username":"0"}
+HTTP HEAD /petclinic/api/visits {"id":0,"date":"fuzzstring","description":"fuzzstring","id":0,"pet":{ "fuzz" : false }}
+HTTP POST /petclinic/api/users {"roles":[{"name":"ROLE_0"}],"firstName":"fuzzstring"}
+HTTP PUT /petclinic/api/owners/ownerid1a146d597 { "fuzz": true}
+HTTP POST /petclinic/api/users {"roles":["fuzzstring"],"username":"fuzzstring"}
+HTTP HEAD /petclinic/api/visits {    "date":"yyyy/MM/dd",    "description":"fuzzstring2",    "id":6784,    "pet":         { "fuzz": true}    }
+HTTP PUT /petclinic/api/owners/owneridf8dca7233f { "fuzz": true}
+HTTP POST /petclinic/api/vets {    "firstName":"fuzzstring",    "id":1,    "lastName":"fuzzstring",    "specialties":    [        {            "id":56,            "name":"test3"        }    ]}
