@@ -71,6 +71,6 @@ for i in dirlist:
     print("total no of test cases: " + str(count_valid + count_invalid))
 
     script_dir = os.path.dirname(__file__)
-    rel_path = "parsed_requests_generative_model_novel_produced_" + i + ".csv"
+    rel_path = "parsedTestCases/parsed_requests_generative_model_novel_produced_" + i + ".csv"
     abs_file_path_csv = os.path.join(script_dir, rel_path)
     df_test_cases.to_csv(abs_file_path_csv)
