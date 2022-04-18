@@ -1,19 +1,12 @@
 import os
-
 from ParseTestsAndAnalyse.ParseTests.Helper.TestRequest import TestRequest
 
 
 class ParsingMethods:
 
     @staticmethod
-    def readInTestCasesProducedGenerativeModel():
+    def readInTestCasesProducedGenerativeModel(abs_file_path_generative_model):
         list_test_requests = []
-
-        path_parent = os.path.dirname(os.getcwd())
-        os.chdir(path_parent)
-        script_dir = os.getcwd()
-        rel_path_generative_model_cases = "novel/model_output_novel_t7_le5000.txt"
-        abs_file_path_generative_model = os.path.join(script_dir, rel_path_generative_model_cases)
 
         # opening the file in read mode
         file = open(abs_file_path_generative_model, "r")
