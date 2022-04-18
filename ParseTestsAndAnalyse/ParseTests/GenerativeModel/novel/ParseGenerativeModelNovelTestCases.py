@@ -27,30 +27,22 @@ for i in dirlist:
         api_url = uri + row['request_uri']
         request_type = row['request_type']
         response = ''
-        if request_type == 'GET':
-            response = requests.get(api_url, row['request_body'])
-        elif request_type == 'PUT':
-            response = requests.put(api_url, row['request_body'])
-        elif request_type == 'POST':
-            response = requests.post(api_url, row['request_body'])
-        elif request_type == 'DELETE':
-            response = requests.delete(api_url)
-        elif request_type == 'HEAD':
-            response = requests.head(api_url)
-        elif request_type == 'OPTION':
-            print("option body:   " + row['request_body'])
-            try:
-                response = requests.options(api_url)
-            except InvalidURL:
-                print("InvalidURL:  " + row + "\n")
-                count_invalid = count_invalid + 1
-                test_case = TestCase(request_type, row['request_uri'], row['request_body'],
-                                 0, 0, False)
-                list_test_cases.append(test_case)
-                continue
-        elif request_type == 'PATCH':
-            response = requests.patch(api_url, row['request_body'])
         try:
+            if request_type == 'GET':
+                response = requests.get(api_url, row['request_body'])
+            elif request_type == 'PUT':
+                response = requests.put(api_url, row['request_body'])
+            elif request_type == 'POST':
+                response = requests.post(api_url, row['request_body'])
+            elif request_type == 'DELETE':
+                response = requests.delete(api_url)
+            elif request_type == 'HEAD':
+                response = requests.head(api_url)
+            elif request_type == 'OPTION':
+                print("option body:   " + row['request_body'])
+                response = requests.options(api_url)
+            elif request_type == 'PATCH':
+                response = requests.patch(api_url, row['request_body'])
             response_code = response.status_code
             time_microseconds = response.elapsed.total_seconds() * 1000000
 
@@ -58,6 +50,13 @@ for i in dirlist:
                                  response_code, time_microseconds, True)
             count_valid = count_valid + 1
             list_test_cases.append(test_case)
+        except InvalidURL:
+            print("InvalidURL:  " + row + "\n")
+            count_invalid = count_invalid + 1
+            test_case = TestCase(request_type, row['request_uri'], row['request_body'],
+                                 0, 0, False)
+            list_test_cases.append(test_case)
+            continue
         except AttributeError:
             print("attribute error:  " + row + "\n")
             count_invalid = count_invalid + 1
