@@ -7,7 +7,7 @@ def main():
     basepath = path.dirname(__file__)
     abs_file_path_folder = path.abspath(path.join(basepath, "..", "ParseTests/GenerativeModel/novel/parsedTestCases"))
 
-    filename = "parsed_requests_generative_model_novel_produced_30min.csv"
+    filename = "parsed_requests_generative_model_novel_produced_120min.csv"
     abs_file_path_novel = path.abspath(path.join(abs_file_path_folder, filename))
     df_generative_test_cases = pd.read_csv(abs_file_path_novel)
 

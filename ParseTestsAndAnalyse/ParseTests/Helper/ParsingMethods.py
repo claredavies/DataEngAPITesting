@@ -1,4 +1,3 @@
-import os
 from ParseTestsAndAnalyse.ParseTests.Helper.TestRequest import TestRequest
 
 
