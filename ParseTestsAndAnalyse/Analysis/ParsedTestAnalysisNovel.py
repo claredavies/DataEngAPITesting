@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from os import listdir
 from os.path import isfile, join
 
+
 def main():
     # Reading in file
     basepath = path.dirname(__file__)
@@ -12,47 +13,39 @@ def main():
     dirlist = [f for f in listdir(abs_file_path_folder) if isfile(join(abs_file_path_folder, f))]
 
     for i in dirlist:
-        abs_file_path_novel = path.abspath(path.join(abs_file_path_folder,i))
+        abs_file_path_novel = path.abspath(path.join(abs_file_path_folder, i))
         df_generative_test_cases = pd.read_csv(abs_file_path_novel)
-        df_generative_test_cases.loc[df_generative_test_cases['request_type'].str.contains('OPTION'), 'request_type'] = 'OPTION'
+        df_generative_test_cases.loc[
+            df_generative_test_cases['request_type'].str.contains('OPTION'), 'request_type'] = 'OPTION'
 
         print("NAME of file: " + i)
-        # plt.figure()
-        # plt.subplot(2, 3, 1)
-        # ax1 = pd.value_counts(df_generative_test_cases['request_uri']).plot.bar()
-        # plt.subplot(2, 3, 2)
-        # ax2 = pd.value_counts(df_generative_test_cases['response_code']).plot.bar()
-        # plt.subplot(2, 3, 3)
-        # ax3 = pd.value_counts(df_generative_test_cases['request_type']).plot.bar()
-        #
-        # ax1.title.set_text('General Request Count Generative')
-        # ax2.title.set_text('Response Code Count Generative')
-        # ax3.title.set_text('Request Type Count Generative')
-        #
-        # plt.figure()
-        # plt.subplot(2, 2, 1)
-        # ax3 = pd.value_counts(df_generative_test_cases['request_type']).plot.pie()
-        # plt.subplot(2, 2, 2)
-        # ax4 = pd.value_counts(df_generative_test_cases['response_code']).plot.pie()
-        # ax3.title.set_text('General Request Count Generative')
-        # ax4.title.set_text('Response Code Count Generative')
 
         total_number_test_cases_generative_model = len(df_generative_test_cases.index)
-        print("Total number of test cases generative model:   " + str(total_number_test_cases_generative_model))
-        df_generative_unique = df_generative_test_cases.drop_duplicates(
-            subset=['request_uri', 'request_type', 'request_body'])
-        total_number_unique_test_cases_generative = len(df_generative_unique.index)
-        print("Total unique test cases generative model:   " + str(total_number_unique_test_cases_generative))
-        print("Counts for response codes generative model: ")
-        print(pd.value_counts(df_generative_test_cases['response_code']))
-        print("Counts for request types generative model: ")
-        print(pd.value_counts(df_generative_test_cases['request_type']))
-        print("Average response time generative model:  " + str((sum(
-            df_generative_test_cases['response_time_microseconds']) / total_number_test_cases_generative_model) / 1000000))
-        print("Uniqueness % (Number of unique tests / Total tests generated) generative model:  " + str(
-            (total_number_unique_test_cases_generative / total_number_test_cases_generative_model) * 100))
+        print("Total number of test cases generative model:   \n" + str(total_number_test_cases_generative_model))
 
-        # plt.show()
+        print("Counts for response codes generative model: \n" + str(pd.value_counts(df_generative_test_cases['response_code'])))
+        print("Counts for request types generative model: \n" + str(pd.value_counts(df_generative_test_cases['request_type'])))
+
+        print("Total number of test cases generative model:   \n" + str(total_number_test_cases_generative_model))
+        no_invalid_cases = (df_generative_test_cases.response_code == 0).sum()
+
+        no_valid_cases = total_number_test_cases_generative_model - no_invalid_cases
+        print("Number of Novel Test Cases which are Valid Requests:  " + str(no_valid_cases.sum())
+              + "   " + str(round(((no_valid_cases/total_number_test_cases_generative_model)*100),2)) + "%")
+
+        no_invalid_cases = (df_generative_test_cases.response_code == 0).sum()
+        print("Number of Novel Test Cases which are Invalid :  " + str(no_invalid_cases.sum())
+              + "   " + str(round(((no_invalid_cases/total_number_test_cases_generative_model)*100),2)) + "%")
+
+        no_passed_cases = (df_generative_test_cases.response_code == 200).sum()
+        print("Number of Novel Test Cases Passed :  " + str(no_passed_cases.sum())
+              + "   " + str(round(((no_passed_cases/total_number_test_cases_generative_model)*100),2)) + "%")
+
+        no_failed_cases = (df_generative_test_cases.response_code == 404).sum() + (df_generative_test_cases.response_code == 500).sum()\
+                          + (df_generative_test_cases.response_code == 400).sum()
+        print("Number of Novel Test Cases Failed :  " + str(no_failed_cases.sum())
+              + "   " + str(round(((no_failed_cases/total_number_test_cases_generative_model)*100),2)) + "%")
+
 
 if __name__ == "__main__":
     main()
