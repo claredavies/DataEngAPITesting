@@ -112,6 +112,157 @@ class TestCasesGenerator:
         config.graph_options.rewrite_options.layout_optimizer = rewriter_config_pb2.RewriterConfig.OFF
         return tf.compat.v1.Session(config=config)
 
+    # with fine tuning we can train the model on our specific dataset
+    def fine_tuning(self, session,
+                    restler_raw_file='test_cases_produced-4.csv',
+                    steps=-1,
+                    model_type='124M',
+                    batch_size=1,
+                    learning_rate=0.0001,
+                    accumulate_gradients=5,
+                    run_name='run1',
+                    sample_length=1023,
+                    only_train_transformer_layers=False,
+                    optimizer='adam'):
+
+        dataset = self.process_restler_output(restler_raw_file)
+
+        checkpoint_path = os.path.join('checkpoint', run_name)
+
+        try:
+            os.makedirs(checkpoint_path)
+        except:
+            pass
+        files = [f for f in os.listdir(checkpoint_path)]
+        for file in ['hparams.json', 'encoder.json', 'vocab.bpe']:
+            try:
+                shutil.copyfile(os.path.join('models', model_type, file),
+                                os.path.join(checkpoint_path, file))
+            except FileNotFoundError as fnf_error:
+                print("You need to download the GPT-2 model first via get_model()")
+                raise (fnf_error)
+
+        enc = encoder.get_encoder(checkpoint_path)
+        hparams = model.default_hparams()
+        with open(os.path.join(checkpoint_path, 'hparams.json')) as f:
+            hparams.override_from_dict(json.load(f))
+
+        if sample_length > hparams.n_ctx:
+            raise ValueError(
+                "Can't get samples longer than window size: %s" % hparams.n_ctx)
+
+        context = tf.compat.v1.placeholder(tf.int32, [batch_size, None])
+        gpus = []
+
+        output = model.model(hparams=hparams, X=context, gpus=gpus, reuse=False)
+        loss = tf.reduce_mean(
+            input_tensor=tf.nn.sparse_softmax_cross_entropy_with_logits(
+                labels=context[:, 1:], logits=output['logits'][:, :-1]))
+
+        all_vars = [v for v in tf.compat.v1.trainable_variables() if 'model' in v.name]
+        # For models larger than 124M, it is better to set only_train_transformer_layers= true
+        train_vars = [v for v in all_vars if '/h' in v.name] if only_train_transformer_layers else all_vars
+
+        if optimizer == 'adam':
+            opt = tf.compat.v1.train.AdamOptimizer(learning_rate=learning_rate)
+        elif optimizer == 'sgd':
+            opt = tf.compat.v1.train.GradientDescentOptimizer(learning_rate=learning_rate)
+
+        # for models larger than 124M, it is better to set accumulate_gradients = 1
+        # accumulate_gradients = 1 means no accumulated grads
+        if accumulate_gradients > 1:
+
+            # It calculates the loss and gradients after each mini-batch, but instead of updating the model parameters, it waits and accumulates the gradients over consecutive batches.
+            opt = AccumulatingOptimizer(
+                opt=opt,
+                var_list=train_vars)
+            opt_reset = opt.reset()
+            opt_compute = opt.compute_gradients(loss)
+            opt_apply = opt.apply_gradients()
+            summary_loss = tf.compat.v1.summary.scalar('loss', opt_apply)
+        else:
+            opt_grads = tf.gradients(ys=loss, xs=train_vars)
+            opt_grads = list(zip(opt_grads, train_vars))
+            opt_apply = opt.apply_gradients(opt_grads)
+            summary_loss = tf.compat.v1.summary.scalar('loss', loss)
+
+        summary_log = tf.compat.v1.summary.FileWriter(checkpoint_path)
+
+        saver = tf.compat.v1.train.Saver(
+            var_list=all_vars,
+            max_to_keep=1)
+        # execute the operation in the tensors
+        session.run(tf.compat.v1.global_variables_initializer())
+        ckpt = tf.train.latest_checkpoint(os.path.join('models', model_type))
+
+        # Loading checkpoint
+        saver.restore(session, ckpt)
+
+        print('Loading dataset...')
+        chunks = load_dataset(enc, dataset, 50000)
+        data_sampler = Sampler(chunks)
+        print('dataset has', data_sampler.total_size, 'tokens')
+        print('Training...')
+        counter = 1
+        counter_path = os.path.join(checkpoint_path, 'counter')
+        counter_base = counter
+
+        def sample_batch():
+            return [data_sampler.sample(1024) for _ in range(batch_size)]
+
+        avg_loss = (0.0, 0.0)
+        start_time = time.time()
+
+        if steps:
+            steps = int(steps)
+
+        # saving the trained model checkpoints
+        def save():
+            try:
+                os.makedirs(checkpoint_path)
+            except:
+                pass
+            print('Saving', os.path.join(checkpoint_path, 'model-{}').format(counter - 1))
+            saver.save(
+                session,
+                os.path.join(checkpoint_path, 'model'),
+                global_step=counter - 1)
+            with open(counter_path, 'w') as fp:
+                fp.write(str(counter - 1) + '\n')
+
+        while True:
+            if steps > 0 and counter == (counter_base + steps):
+                save()
+                return
+
+            if accumulate_gradients > 1:
+                # execute the operation in the tensors
+                session.run(opt_reset)
+                for _ in range(accumulate_gradients):
+                    session.run(
+                        opt_compute, feed_dict={context: sample_batch()})
+                (v_loss, v_summary) = session.run((opt_apply, summary_loss))
+            else:
+                (_, v_loss, v_summary) = session.run(
+                    (opt_apply, loss, summary_loss),
+                    feed_dict={context: sample_batch()})
+
+            summary_log.add_summary(v_summary, counter)
+
+            if counter % 20 == 0:
+                avg_loss = (avg_loss[0] * 0.99 + v_loss,
+                            avg_loss[1] * 0.99 + 1.0)
+
+                print(
+                    '[{counter} | {time:2.2f}] loss={loss:2.2f} avg={avg:2.2f}'
+                        .format(
+                        counter=counter,
+                        time=time.time() - start_time,
+                        loss=v_loss,
+                        avg=avg_loss[0] / avg_loss[1]))
+
+            counter += 1
+
     def generate(self, session,
                  run_name='run1',
                  model_type=None,
