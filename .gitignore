@@ -19,7 +19,8 @@ TestCasesGenerationApp/__pycache__
 TestCasesGenerationApp/__pycache__/
 TestCasesGenerationApp/.idea
 TestCasesGenerationApp/.idea/
-
+TestCasesGenerationApp/src/__pycache__
+TestCasesGenerationApp/src/__pycache__/
 # Easier branch switching
 springboot-petclinic-client/
 springboot-petclinic-server/
