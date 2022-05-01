@@ -13,6 +13,12 @@ target/*
 /target
 
 generated/
+TestCasesGenerationApp/venv
+TestCasesGenerationApp/venv/
+TestCasesGenerationApp/__pycache__
+TestCasesGenerationApp/__pycache__/
+TestCasesGenerationApp/.idea
+TestCasesGenerationApp/.idea/
 
 # Easier branch switching
 springboot-petclinic-client/
